@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Elev8 Hydration Therapy &mdash; IV Therapy Built for Athletes</title>
+<meta name="description" content="Clinician-built IV drips engineered for performance, recovery, and output. Delivered to your gym, home, or our Miami studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --base:#0A0A0A; --panel:#141414; --panel-2:#1b1b1b; --volt:#C6FF00; --volt-d:#9ccc00;
+  --ink:#F2F2F2; --muted:#9a9a9a; --muted-2:#c4c4c4;
+  --line:rgba(255,255,255,.09); --line-2:rgba(255,255,255,.16);
+  /* back-compat names used by inline styles + reused classes */
+  --offwhite:#F2F2F2; --charcoal:#0A0A0A; --charcoal-2:#c4c4c4; --taupe-d:#9a9a9a; --taupe:#7d7d7d;
+  --beige:#0d0d0d; --sage:#C6FF00;
+  --shadow-sm:0 2px 12px rgba(0,0,0,.55); --shadow-md:0 14px 36px rgba(0,0,0,.6); --shadow-lg:0 28px 70px rgba(0,0,0,.7);
+  --glow:0 0 0 1px rgba(198,255,0,.55), 0 10px 36px rgba(198,255,0,.16);
+  --r-sm:3px; --r-md:4px; --r-lg:6px; --r-xl:8px; --r-pill:4px;
+  --maxw:1200px; --header-h:80px; --ease:cubic-bezier(.22,.61,.36,1);
+  --font-display:'Teko', Impact, sans-serif;
+  --font-cond:'Rajdhani', system-ui, sans-serif;
+  --font-sans:'Inter', system-ui, -apple-system, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0; font-family:var(--font-sans); color:var(--ink);
+  background-color:var(--base);
+  background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
+  background-size:48px 48px;
+  line-height:1.62; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:.94;letter-spacing:.01em;text-transform:uppercase;margin:0 0 .35em;color:var(--ink)}
+p{margin:0 0 1em;color:var(--muted-2)}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.eyebrow{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.26em;font-size:12.5px;font-weight:700;color:var(--volt);margin:0 0 18px;display:inline-flex;align-items:center;gap:11px}
+.eyebrow::before{content:"";width:22px;height:3px;background:var(--volt);display:inline-block}
+.eyebrow.center{justify-content:center}
+.section{padding:100px 0;position:relative}
+.section.tight{padding:62px 0}
+.lede{font-size:1.12rem;color:var(--muted-2);max-width:62ch;font-family:var(--font-sans)}
+.text-center{text-align:center}.mx-auto{margin-left:auto;margin-right:auto}
+.section-head{max-width:66ch}.section-head.center{margin:0 auto;text-align:center}
+.mt-0{margin-top:0}.mb-0{margin-bottom:0}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-cond);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:1rem;padding:15px 30px;border-radius:var(--r-md);border:2px solid transparent;cursor:pointer;transition:transform .22s var(--ease),box-shadow .22s var(--ease),background .22s var(--ease),color .22s var(--ease),border-color .22s var(--ease)}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn-primary,.btn-sage{background:var(--volt);color:#0A0A0A;border-color:var(--volt)}
+.btn-primary:hover,.btn-sage:hover{background:#d4ff33;border-color:#d4ff33;transform:translateY(-3px);box-shadow:0 12px 30px rgba(198,255,0,.28)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--volt);color:var(--volt);transform:translateY(-3px)}
+.btn-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-light:hover{background:var(--volt);border-color:var(--volt);color:#0A0A0A;transform:translateY(-3px)}
+.btn-block{width:100%}.btn-sm{padding:11px 20px;font-size:.92rem}
+
+/* ---- header ---- */
+.site-header{position:fixed;top:0;left:0;right:0;height:var(--header-h);z-index:100;display:flex;align-items:center;transition:background .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease);background:transparent;border-bottom:1px solid transparent}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.site-header.scrolled{background:rgba(8,8,8,.82);backdrop-filter:saturate(140%) blur(16px);-webkit-backdrop-filter:saturate(140%) blur(16px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--font-display);font-weight:600;font-size:1.9rem;text-transform:uppercase;letter-spacing:.02em;line-height:1;color:#fff}
+.brand .logo-mark{width:38px;height:38px;border-radius:var(--r-sm);display:grid;place-items:center;background:var(--volt);color:#0A0A0A;font-family:var(--font-cond);font-weight:700;font-size:1rem;letter-spacing:.02em}
+.brand .num{color:var(--volt)}
+.site-header.on-dark{color:#fff}
+.site-header .nav-links a{color:rgba(255,255,255,.82)}
+.site-header.scrolled .nav-links a{color:rgba(255,255,255,.82)}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none;margin:0;padding:0}
+.nav-links a{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;font-size:1rem;font-weight:600;position:relative;padding:4px 0;transition:color .2s var(--ease)}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--volt);transition:right .3s var(--ease)}
+.nav-links a:hover::after,.nav-links a.active::after{right:0}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.header-cta{display:flex;align-items:center;gap:14px}
+.menu-toggle{display:none;width:46px;height:46px;border:none;background:transparent;cursor:pointer;border-radius:var(--r-sm);align-items:center;justify-content:center;color:#fff}
+.menu-toggle span,.menu-toggle span::before,.menu-toggle span::after{content:"";display:block;width:24px;height:2.5px;background:currentColor;transition:transform .3s var(--ease)}
+.menu-toggle span::before{transform:translateY(-7px)}.menu-toggle span::after{transform:translateY(5px)}
+
+/* ---- mobile drawer ---- */
+.mobile-nav{position:fixed;inset:0;z-index:200;background:rgba(8,8,8,.98);backdrop-filter:blur(14px);transform:translateY(-100%);transition:transform .5s var(--ease);display:flex;flex-direction:column;padding:24px 26px 40px}
+.mobile-nav.open{transform:translateY(0)}
+.mobile-nav .m-top{display:flex;justify-content:space-between;align-items:center}
+.mobile-nav .m-close{width:46px;height:46px;border:none;background:transparent;font-size:2rem;cursor:pointer;color:#fff}
+.mobile-nav ul{list-style:none;margin:36px 0 0;padding:0}
+.mobile-nav li{border-bottom:1px solid var(--line)}
+.mobile-nav a{display:block;padding:20px 4px;font-family:var(--font-display);text-transform:uppercase;font-size:2.2rem;color:#fff}
+.mobile-nav a:hover{color:var(--volt)}
+.mobile-nav .m-cta{margin-top:auto;display:grid;gap:12px}
+
+/* ---- hero ---- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media video,.hero-media .fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media .fallback{background:radial-gradient(1000px 600px at 75% 15%,rgba(198,255,0,.22),transparent 60%),linear-gradient(160deg,#101010,#000)}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.3) 38%,rgba(0,0,0,.85) 100%)}
+.hero-inner{position:relative;z-index:2;padding:calc(var(--header-h) + 44px) 0 70px}
+.hero h1{color:#fff;font-size:clamp(3.4rem,9vw,8rem);line-height:.86;max-width:16ch;text-shadow:0 4px 40px rgba(0,0,0,.4)}
+.hero .hero-sub{color:rgba(255,255,255,.9);font-size:1.18rem;max-width:52ch;margin-top:14px;font-family:var(--font-sans)}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.hero-badges{display:flex;gap:26px;flex-wrap:wrap;margin-top:46px}
+.hero-badge{display:flex;align-items:center;gap:11px;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:.95rem;color:rgba(255,255,255,.9)}
+.hero-badge .dot{width:9px;height:9px;background:var(--volt);box-shadow:0 0 0 4px rgba(198,255,0,.2)}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.7);font-family:var(--font-cond);font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-hint .bar{width:2px;height:42px;background:linear-gradient(var(--volt),transparent);animation:drop 1.8s var(--ease) infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.1%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---- page hero ---- */
+.page-hero{position:relative;padding:calc(var(--header-h) + 84px) 0 74px;background:radial-gradient(700px 360px at 82% 0%,rgba(198,255,0,.12),transparent 60%),#0c0c0c;overflow:hidden;border-bottom:1px solid var(--line)}
+.page-hero h1{font-size:clamp(2.6rem,6.5vw,5.2rem);max-width:20ch}
+.page-hero .lede{position:relative}
+.breadcrumb{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.12em;font-size:.85rem;color:var(--muted);margin-bottom:20px}
+.breadcrumb a:hover{color:var(--volt)}
+
+/* ---- grids/cards ---- */
+.grid{display:grid;gap:22px}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);position:relative}
+.card:hover{transform:translateY(-5px);border-color:var(--volt);box-shadow:var(--shadow-md)}
+.iv-card{display:flex;flex-direction:column;height:100%;overflow:hidden}
+.iv-card::before{content:"";position:absolute;top:0;left:0;width:0;height:3px;background:var(--volt);transition:width .35s var(--ease)}
+.iv-card:hover::before{width:100%}
+.iv-card .iv-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.iv-icon{width:54px;height:54px;border-radius:var(--r-md);display:grid;place-items:center;background:#0c0c0c;border:1px solid var(--line);color:var(--volt)}
+.iv-icon svg{width:27px;height:27px}
+.iv-price{font-family:var(--font-display);font-size:1.9rem;color:var(--volt)}
+.iv-price small{font-family:var(--font-cond);font-size:.78rem;color:var(--muted);font-weight:600}
+.iv-card h3{font-size:1.75rem;margin-bottom:8px}
+.iv-card .iv-desc{color:var(--muted-2);font-size:.96rem;flex:1;font-family:var(--font-sans)}
+.iv-tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+.tag{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.06em;font-size:.74rem;font-weight:700;padding:6px 12px;border-radius:var(--r-sm);background:#0c0c0c;border:1px solid var(--line);color:var(--muted)}
+.tag.sage{background:rgba(198,255,0,.12);border-color:rgba(198,255,0,.4);color:var(--volt)}
+.iv-card .iv-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.link-arrow{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.08em;font-weight:700;font-size:.92rem;display:inline-flex;align-items:center;gap:7px;color:var(--volt)}
+.link-arrow svg{transition:transform .3s var(--ease)}
+.iv-card:hover .link-arrow svg{transform:translateX(4px)}
+
+/* ---- stats / features ---- */
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stat{text-align:center}
+.stat .num{font-family:var(--font-display);font-size:3.6rem;line-height:.9;color:var(--volt)}
+.stat .lbl{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;color:var(--muted);margin-top:8px}
+.feature{display:flex;gap:16px;align-items:flex-start}
+.feature .f-ic{flex:none;width:48px;height:48px;border-radius:var(--r-md);background:rgba(198,255,0,.1);color:var(--volt);display:grid;place-items:center;border:1px solid rgba(198,255,0,.25)}
+.feature .f-ic svg{width:23px;height:23px}
+.feature h4{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.04em;font-weight:700;font-size:1.12rem;margin-bottom:4px}
+.feature p{font-size:.94rem;margin:0;font-family:var(--font-sans)}
+
+/* ---- split ---- */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.media-frame{border-radius:var(--r-xl);overflow:hidden;position:relative;box-shadow:var(--shadow-lg);aspect-ratio:4/5;background:#111;border:1px solid var(--line)}
+.media-frame .swatch-art{position:absolute;inset:0}
+
+/* ---- membership/pricing ---- */
+.billing-toggle{display:inline-flex;align-items:center;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-md);padding:5px}
+.billing-toggle button{border:none;background:transparent;cursor:pointer;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.06em;font-weight:700;font-size:.92rem;color:var(--muted);padding:10px 22px;border-radius:var(--r-sm);transition:all .3s var(--ease)}
+.billing-toggle button.active{background:var(--volt);color:#0A0A0A}
+.billing-toggle .save{font-size:.72rem;color:var(--volt-d);margin-left:4px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.plan{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:36px 30px;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
+.plan:hover{transform:translateY(-6px);border-color:var(--line-2)}
+.plan.featured{background:#0e0e0e;border:2px solid var(--volt);box-shadow:var(--glow)}
+.plan.featured .price{color:var(--volt)}
+.plan-badge{position:absolute;top:-1px;right:22px;font-family:var(--font-cond);font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--volt);color:#0A0A0A;padding:6px 14px;border-radius:0 0 var(--r-sm) var(--r-sm)}
+.plan-name{font-family:var(--font-cond);font-weight:700;font-size:.86rem;letter-spacing:.2em;text-transform:uppercase;color:var(--volt)}
+.plan h3{font-size:2rem;margin:14px 0 4px}
+.price{font-family:var(--font-display);font-size:3.6rem;line-height:1;margin:14px 0 2px;color:var(--ink)}
+.price .per{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.04em;font-size:.92rem;font-weight:600;color:var(--muted)}
+.plan-desc{font-size:.94rem;margin:10px 0 22px;color:var(--muted-2);font-family:var(--font-sans)}
+.plan-feat{list-style:none;margin:0 0 28px;padding:22px 0 0;border-top:1px solid var(--line);display:grid;gap:13px}
+.plan-feat li{display:flex;gap:11px;align-items:flex-start;font-size:.94rem;color:var(--muted-2);font-family:var(--font-sans)}
+.plan-feat li svg{flex:none;width:19px;height:19px;color:var(--volt);margin-top:2px}
+.plan .btn{margin-top:auto}
+.compare{width:100%;border-collapse:collapse;background:var(--panel);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line)}
+.compare th,.compare td{padding:16px 20px;text-align:center;border-bottom:1px solid var(--line);font-size:.94rem;font-family:var(--font-sans)}
+.compare th{background:#0c0c0c;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--ink)}
+.compare td:first-child,.compare th:first-child{text-align:left;color:var(--ink);font-weight:600}
+.compare tr:last-child td{border-bottom:none}
+.compare .yes{color:var(--volt);font-weight:700}.compare .no{color:#4a4a4a}
+
+/* ---- team ---- */
+.team-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:transform .3s var(--ease),border-color .3s var(--ease)}
+.team-card:hover{transform:translateY(-5px);border-color:var(--volt)}
+.team-photo{aspect-ratio:1/1;position:relative;overflow:hidden}
+.team-photo .initials{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-display);font-size:5rem;color:rgba(198,255,0,.6)}
+.team-body{padding:28px}
+.team-body .role{font-family:var(--font-cond);font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--volt)}
+.team-body h3{font-size:2rem;margin:8px 0 10px}
+.team-body p{font-family:var(--font-sans)}
+.cred-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+
+/* ---- steps ---- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.step .n{width:54px;height:54px;border-radius:var(--r-md);background:var(--volt);color:#0A0A0A;display:grid;place-items:center;font-family:var(--font-display);font-size:1.7rem;margin-bottom:16px}
+.step h4{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.04em;font-weight:700;font-size:1.15rem;margin-bottom:6px}
+.step p{font-size:.92rem;margin:0;font-family:var(--font-sans)}
+
+/* ---- testimonials ---- */
+.quote-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px}
+.quote-card .stars{color:var(--volt);letter-spacing:2px;margin-bottom:12px}
+.quote-card p{font-size:1.05rem;color:var(--ink);font-family:var(--font-sans)}
+.quote-card .who{display:flex;align-items:center;gap:12px;margin-top:16px}
+.quote-card .who .av{width:42px;height:42px;border-radius:var(--r-sm);background:rgba(198,255,0,.14);display:grid;place-items:center;font-family:var(--font-display);font-size:1.4rem;color:var(--volt)}
+.quote-card .who .nm{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.04em;font-weight:700;font-size:.95rem}
+.quote-card .who .loc{font-size:.82rem;color:var(--muted)}
+
+/* ---- cta band ---- */
+.cta-band{position:relative;overflow:hidden;background:#0e0e0e;border:1px solid var(--line);border-left:4px solid var(--volt);border-radius:var(--r-lg);padding:66px}
+.cta-band::before{content:"";position:absolute;right:-80px;bottom:-120px;width:360px;height:360px;background:radial-gradient(circle,rgba(198,255,0,.16),transparent 60%)}
+.cta-band h2{color:#fff;font-size:clamp(2.4rem,5vw,4rem);position:relative}
+.cta-band p{color:rgba(255,255,255,.8);position:relative;font-family:var(--font-sans)}
+.cta-band .hero-actions{position:relative}
+
+/* ---- drip detail ---- */
+.detail-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:start}
+.detail-card{position:sticky;top:calc(var(--header-h) + 24px);background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px;box-shadow:var(--shadow-md)}
+.detail-card .price-line{display:flex;align-items:baseline;gap:8px}
+.detail-card .price-line .big{font-family:var(--font-display);font-size:3rem;color:var(--volt)}
+.ingredient{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.ingredient:last-child{border-bottom:none}
+.ingredient .i-ic{flex:none;width:42px;height:42px;border-radius:var(--r-md);background:rgba(198,255,0,.1);color:var(--volt);display:grid;place-items:center;border:1px solid rgba(198,255,0,.22)}
+.ingredient h4{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.03em;font-weight:700;font-size:1.02rem;margin:0 0 2px}
+.ingredient p{font-size:.88rem;margin:0;font-family:var(--font-sans)}
+.pill-list{display:flex;flex-wrap:wrap;gap:10px}
+.benefit-chip{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 18px;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.04em;font-size:.92rem;font-weight:600}
+.benefit-chip svg{width:18px;height:18px;color:var(--volt);flex:none}
+
+/* ---- booking ---- */
+.booking-shell{max-width:920px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden}
+.booking-progress{display:flex;background:#0c0c0c;border-bottom:1px solid var(--line)}
+.booking-progress .bp{flex:1;padding:18px 16px;text-align:center;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.05em;font-size:.85rem;font-weight:700;color:var(--muted)}
+.booking-progress .bp .bp-n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:var(--r-sm);background:#1a1a1a;border:1px solid var(--line-2);margin-right:8px;font-size:.8rem}
+.booking-progress .bp.active{color:var(--ink)}
+.booking-progress .bp.active .bp-n{background:var(--volt);color:#0A0A0A;border-color:var(--volt)}
+.booking-progress .bp.done .bp-n{background:var(--volt);color:#0A0A0A;border-color:var(--volt)}
+.booking-body{padding:38px}
+.book-step{display:none}.book-step.active{display:block;animation:fade .4s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.option{border:1.5px solid var(--line);border-radius:var(--r-md);padding:18px 20px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:all .25s var(--ease);background:#0e0e0e}
+.option:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.option.selected{border-color:var(--volt);background:rgba(198,255,0,.06)}
+.option .o-name{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.03em;font-weight:700}
+.option .o-meta{font-size:.84rem;color:var(--muted);font-family:var(--font-sans)}
+.option .o-price{font-family:var(--font-display);font-size:1.5rem;color:var(--volt)}
+.field{margin-bottom:18px}
+.field label{display:block;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.05em;font-size:.85rem;font-weight:700;margin-bottom:8px;color:var(--ink)}
+.field input,.field select,.field textarea{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:var(--r-sm);font-family:var(--font-sans);font-size:.96rem;color:var(--ink);background:#0c0c0c;transition:border-color .2s var(--ease)}
+.field input::placeholder,.field textarea::placeholder{color:#666}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--volt)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.chip-row{display:flex;flex-wrap:wrap;gap:10px}
+.chip-select{padding:11px 18px;border:1.5px solid var(--line);border-radius:var(--r-sm);cursor:pointer;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.04em;font-size:.9rem;font-weight:600;transition:all .2s var(--ease);background:#0e0e0e}
+.chip-select.selected{background:var(--volt);color:#0A0A0A;border-color:var(--volt)}
+.book-actions{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.summary-line{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed var(--line);font-size:.96rem;font-family:var(--font-sans)}
+.summary-line.total{border-bottom:none;border-top:2px solid var(--volt);margin-top:6px;padding-top:16px;font-family:var(--font-cond);text-transform:uppercase;font-weight:700;font-size:1.2rem}
+.confirm-check{width:88px;height:88px;border-radius:var(--r-md);background:rgba(198,255,0,.14);color:var(--volt);display:grid;place-items:center;margin:0 auto 22px}
+.confirm-check svg{width:46px;height:46px}
+
+/* ---- footer ---- */
+.site-footer{background:#070707;color:var(--muted);padding:74px 0 40px;border-top:1px solid var(--line)}
+.site-footer a{color:var(--muted);transition:color .2s}.site-footer a:hover{color:var(--volt)}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.site-footer .brand{margin-bottom:16px}
+.site-footer h5{font-family:var(--font-cond);font-weight:700;font-size:.84rem;letter-spacing:.16em;text-transform:uppercase;color:var(--volt);margin:0 0 16px}
+.site-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:11px;font-size:.92rem;font-family:var(--font-sans)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;margin-top:50px;padding-top:26px;border-top:1px solid var(--line);font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.05em;font-size:.82rem;color:#666}
+.footer-disclaimer{font-size:.78rem;color:#5a5a5a;max-width:72ch;margin-top:14px;font-family:var(--font-sans)}
+.social-row{display:flex;gap:12px;margin-top:18px}
+.social-row a{width:42px;height:42px;border-radius:var(--r-sm);border:1px solid var(--line);display:grid;place-items:center}
+.social-row a:hover{background:var(--volt);color:#0A0A0A;border-color:var(--volt)}
+
+/* ---- tab bar ---- */
+.tabbar{position:fixed;left:14px;right:14px;bottom:14px;z-index:90;background:rgba(10,10,10,.9);backdrop-filter:blur(16px) saturate(140%);border:1px solid var(--line-2);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);display:none;align-items:center;justify-content:space-around;padding:8px}
+.tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.04em;font-size:.64rem;font-weight:700;color:var(--muted);padding:6px 10px;border-radius:var(--r-sm);flex:1}
+.tabbar a svg{width:21px;height:21px}
+.tabbar a.active{color:var(--volt)}
+.tabbar a.tab-book{background:var(--volt);color:#0A0A0A}
+
+/* ---- reveal ---- */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.08s}.reveal[data-d="2"]{transition-delay:.16s}.reveal[data-d="3"]{transition-delay:.24s}
+
+/* ---- marquee ---- */
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--volt)}
+.marquee-track{display:flex;gap:50px;padding:16px 0;white-space:nowrap;animation:marq 24s linear infinite}
+.marquee-track span{font-family:var(--font-display);text-transform:uppercase;font-size:1.5rem;color:#0A0A0A;display:inline-flex;align-items:center;gap:18px;letter-spacing:.02em}
+.marquee-track span::after{content:"/";color:#0A0A0A;font-weight:700}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---- utils ---- */
+.bg-beige{background:#0d0d0d}.bg-white{background:#121212}.bg-sage-soft{background:rgba(198,255,0,.05)}
+.divider{height:1px;background:var(--line);border:none;margin:0}
+
+/* ---- SPA routing ---- */
+.page{display:none}.page:target{display:block;animation:pagein .45s var(--ease)}
+body:not(:has(.page:target)) #home{display:block}
+@keyframes pagein{from{opacity:.3}to{opacity:1}}
+
+/* ---- responsive ---- */
+@media (max-width:980px){
+  .split{grid-template-columns:1fr;gap:36px}
+  .detail-grid{grid-template-columns:1fr;gap:32px}.detail-card{position:static}
+  .grid-4{grid-template-columns:repeat(2,1fr)}.stat-row{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .plans{grid-template-columns:1fr;max-width:460px;margin:0 auto}.plan.featured{order:-1}
+  .steps{grid-template-columns:repeat(2,1fr)}.cta-band{padding:46px 32px}
+}
+@media (max-width:760px){
+  :root{--header-h:64px}
+  .nav-links{display:none}
+  .header-cta .btn-light,.header-cta .btn-ghost{display:none}
+  .header-cta{gap:8px}.header-cta .btn-primary{display:inline-flex;padding:9px 15px;font-size:.84rem}
+  .menu-toggle{display:inline-flex}.container{padding:0 18px}
+  .section{padding:62px 0}.section.tight{padding:42px 0}
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.option-grid{grid-template-columns:1fr}.field-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:26px}.steps{grid-template-columns:1fr;gap:12px}
+  .hero h1{font-size:3rem;line-height:.9}.hero .hero-sub{font-size:1.02rem}
+  .page-hero{padding-top:calc(var(--header-h) + 54px);padding-bottom:52px}.page-hero h1{font-size:2.6rem}
+  .lede,.page-hero .lede{font-size:1rem}
+  .cta-band h2{font-size:2.2rem}.stat .num{font-size:2.8rem}.price{font-size:3rem}.iv-card h3{font-size:1.5rem}
+  .marquee-track{gap:34px}.marquee-track span{font-size:1.25rem}
+  .btn{padding:15px 22px;font-size:.98rem;min-height:52px}.btn-sm{padding:12px 18px}
+  .hero-actions{gap:10px}.hero-actions .btn{flex:1 1 100%;width:100%}
+  .mobile-nav{padding:18px 20px calc(30px + env(safe-area-inset-bottom))}.mobile-nav a{font-size:2rem;padding:16px 4px}
+  .mobile-nav .m-cta .btn{width:100%}
+  .card{padding:22px}.plan{padding:28px 24px}.cta-band{padding:36px 22px}
+  .booking-body{padding:22px 18px}.booking-progress .bp{font-size:0;padding:14px 4px}.booking-progress .bp .bp-n{font-size:.8rem;margin:0}
+  .book-actions{flex-direction:column-reverse;gap:10px}.book-actions .btn{width:100%}
+  .tabbar{display:flex;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom))}.tabbar a{font-size:.62rem;padding:6px 4px}
+  body.has-tabbar{padding-bottom:94px}
+  .hero-badges{gap:12px;flex-direction:column;align-items:flex-start;margin-top:34px}
+}
+@media (max-width:460px){
+  .footer-grid{grid-template-columns:1fr;gap:22px}.stat-row{grid-template-columns:1fr 1fr;gap:16px}
+  .container{padding:0 16px}.brand{font-size:1.6rem}.brand .logo-mark{width:34px;height:34px}
+  .hero h1{font-size:2.6rem}.page-hero h1{font-size:2.1rem}
+  .price{font-size:2.6rem}.billing-toggle button{padding:9px 14px;font-size:.84rem}
+}
+
+</style>
+</head>
+<body class="has-tabbar">
+
+<header class="site-header on-dark">
+  <div class="container">
+    <a class="brand" href="#home" aria-label="Elev8 Hydration home"><span class="logo-mark">E8</span> Elev<span class="num">8</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">IV Menu</a></li>
+      <li><a href="#memberships">Membership</a></li>
+      <li><a href="#about">About</a></li>
+    </ul></nav>
+    <div class="header-cta">
+      <a class="btn btn-light btn-sm" href="tel:+13055551888">Call</a>
+      <a class="btn btn-primary btn-sm" href="#book">Book Now</a>
+      <button class="menu-toggle" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-nav">
+  <div class="m-top">
+    <a class="brand" href="#home"><span class="logo-mark">E8</span> Elev<span class="num">8</span></a>
+    <button class="m-close" aria-label="Close menu">&times;</button>
+  </div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">IV Menu</a></li>
+    <li><a href="#memberships">Membership</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#book">Book Now</a></li>
+  </ul>
+  <div class="m-cta">
+    <a class="btn btn-light" href="tel:+13055551888">Call (305) 555-1888</a>
+    <a class="btn btn-primary" href="#book">Book Your Drip</a>
+  </div>
+</div>
+
+<div class="page" id="home">
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-media">
+    <div class="fallback"></div>
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture poster="">
+      <source src="https://elev8hydrationtherapy.com/wp-content/uploads/2026/06/elev8hydration.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="container hero-inner">
+    <p class="eyebrow" style="color:var(--volt)">Mobile IV Therapy · Built for Athletes</p>
+    <h1>Fuel the grind.<br>Own recovery.</h1>
+    <p class="hero-sub">Clinician-built IV drips that hit harder than the workout. Delivered to your gym, home, or our studio — engineered for output.</p>
+    <div class="hero-actions">
+      <a class="btn btn-sage" href="#book">Book a Drip</a>
+      <a class="btn btn-light" href="#memberships">Become a Member</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge"><span class="dot"></span> Licensed nurses & paramedics</div>
+      <div class="hero-badge"><span class="dot"></span> Same-day mobile visits</div>
+      <div class="hero-badge"><span class="dot"></span> 4,000+ drips delivered</div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><span class="bar"></span></div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Train Harder</span><span>Recover Faster</span><span>Outlast Everyone</span><span>Zero Excuses</span><span>Peak Output</span><span>Stay Dangerous</span>
+    <span>Train Harder</span><span>Recover Faster</span><span>Outlast Everyone</span><span>Zero Excuses</span><span>Peak Output</span><span>Stay Dangerous</span>
+  </div>
+</div>
+
+<!-- ================= VALUE PROPS ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:54px">
+      <p class="eyebrow center">Why Elev8</p>
+      <h2>Built for people who don't skip.</h2>
+      <p class="lede mx-auto">Every drip is engineered around your goals and run by a licensed clinician. No clinics. No waiting rooms. Just output you can feel.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal" data-d="1">
+        <div class="feature">
+          <span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h4l2-7 3 14 2-7h3"/></svg></span>
+          <div><h4>Clinician-led care</h4><p>Treatments delivered by registered nurses and paramedics with a screening before every visit.</p></div>
+        </div>
+      </div>
+      <div class="card reveal" data-d="2">
+        <div class="feature">
+          <span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span>
+          <div><h4>Made for your goals</h4><p>Performance, recovery, immunity or glow — formulas tuned to what your body actually needs.</p></div>
+        </div>
+      </div>
+      <div class="card reveal" data-d="3">
+        <div class="feature">
+          <span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8"/></svg></span>
+          <div><h4>Anywhere, on demand</h4><p>Home, office, hotel, gym, or our studio. Same-day appointments across greater Miami.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= IV MENU PREVIEW ================= -->
+<section class="section bg-beige">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:42px" class="reveal">
+      <div class="section-head">
+        <p class="eyebrow">The IV Menu</p>
+        <h2>Six weapons. One goal.</h2>
+        <p class="lede">Each blend is single-dose, clinician-prepared, and ready in about 45 minutes.</p>
+      </div>
+      <a class="btn btn-ghost" href="#services">View full menu →</a>
+    </div>
+
+    <div class="grid grid-3">
+      <!-- Athletic -->
+      <a class="card iv-card reveal" data-d="1" href="#athletic-performance">
+        <div class="iv-top">
+          <span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+          <span class="iv-price">$199</span>
+        </div>
+        <h3>Athletic Performance</h3>
+        <p class="iv-desc">Amino acids, magnesium and B-complex to prime muscles, sharpen focus and push your ceiling.</p>
+        <div class="iv-tags"><span class="tag sage">Pre / post training</span><span class="tag">Endurance</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <!-- Recovery -->
+      <a class="card iv-card reveal" data-d="2" href="#recovery">
+        <div class="iv-top">
+          <span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></span>
+          <span class="iv-price">$189</span>
+        </div>
+        <h3>Recovery</h3>
+        <p class="iv-desc">Anti-nausea, electrolytes and glutathione to bounce back from travel, late nights or hard efforts.</p>
+        <div class="iv-tags"><span class="tag sage">Bounce back</span><span class="tag">Detox</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <!-- Energy -->
+      <a class="card iv-card reveal" data-d="3" href="#energy">
+        <div class="iv-top">
+          <span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span>
+          <span class="iv-price">$179</span>
+        </div>
+        <h3>Energy</h3>
+        <p class="iv-desc">A B12 + B-complex boost with amino blends to clear brain fog and power a demanding week.</p>
+        <div class="iv-tags"><span class="tag sage">Zero Excuses</span><span class="tag">Focus</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <!-- Hydration Rescue -->
+      <a class="card iv-card reveal" data-d="1" href="#hydration-rescue">
+        <div class="iv-top">
+          <span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3s5.5 6.5 5.5 11a5.5 5.5 0 0 1-11 0C6.5 9.5 12 3 12 3z"/></svg></span>
+          <span class="iv-price">$149</span>
+        </div>
+        <h3>Hydration Rescue</h3>
+        <p class="iv-desc">A fast liter of balanced fluids and electrolytes to rehydrate after heat, sweat or a long flight.</p>
+        <div class="iv-tags"><span class="tag sage">Rapid rehydrate</span><span class="tag">Everyday</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <!-- NAD -->
+      <a class="card iv-card reveal" data-d="2" href="#nad-plus">
+        <div class="iv-top">
+          <span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3c5 4 5 14 10 18M17 3C12 7 12 17 7 21M8 7h8M7.5 12h9M8 17h8"/></svg></span>
+          <span class="iv-price">$349</span>
+        </div>
+        <h3>NAD+ Renewal</h3>
+        <p class="iv-desc">Cellular-level repair to support clarity, longevity and metabolic recovery. The reset button.</p>
+        <div class="iv-tags"><span class="tag sage">Longevity</span><span class="tag">Cellular</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <!-- Immunity -->
+      <a class="card iv-card reveal" data-d="3" href="#immunity">
+        <div class="iv-top">
+          <span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/></svg></span>
+          <span class="iv-price">$169</span>
+        </div>
+        <h3>Immunity</h3>
+        <p class="iv-desc">High-dose vitamin C, zinc and antioxidants to shore up defenses before travel or at the first sign of a bug.</p>
+        <div class="iv-tags"><span class="tag sage">Defense</span><span class="tag">Travel-ready</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:50px">
+      <p class="eyebrow center">How it works</p>
+      <h2>Booked in minutes. Better in under an hour.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" data-d="1"><div class="n">1</div><h4>Choose your drip</h4><p>Pick a formula by goal, or let our team recommend one in the app.</p></div>
+      <div class="step reveal" data-d="2"><div class="n">2</div><h4>Pick time & place</h4><p>Home, office, gym or studio — same-day slots across Miami.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">3</div><h4>Quick health screen</h4><p>Your clinician confirms it's a fit and preps your single-dose blend.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">4</div><h4>Relax & elevate</h4><p>Sit back for ~45 minutes and feel the difference the same day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MEMBERSHIP (3 TIERS) ================= -->
+<section class="section bg-sage-soft" id="membership">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:30px">
+      <p class="eyebrow center">Monthly Membership</p>
+      <h2>Make recovery non-negotiable.</h2>
+      <p class="lede mx-auto">Members get a monthly IV at a locked-in rate, priority booking, and credits that roll over. Pause or cancel anytime.</p>
+    </div>
+
+    <div class="text-center reveal" style="margin-bottom:40px">
+      <div class="billing-toggle" data-billing>
+        <button class="active" data-mode="monthly">Monthly</button>
+        <button data-mode="quarterly">Quarterly <span class="save">save 15%</span></button>
+      </div>
+    </div>
+
+    <div class="plans">
+      <!-- Essential -->
+      <div class="plan reveal" data-d="1">
+        <span class="plan-name">Essential</span>
+        <h3>The Baseline</h3>
+        <div class="price">$<span data-price data-monthly="129" data-quarterly="110">129</span><span class="per" data-per>/month</span></div>
+        <p class="plan-desc">One signature drip every month to stay ahead of fatigue and dehydration.</p>
+        <ul class="plan-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 1 signature IV / month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 10% off add-on boosters</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Member-only pricing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Credits roll over 60 days</li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="#book">Choose Essential</a>
+      </div>
+
+      <!-- Elevated (featured) -->
+      <div class="plan featured reveal" data-d="2">
+        <span class="plan-badge">Most popular</span>
+        <span class="plan-name">Elevated</span>
+        <h3>The Standard</h3>
+        <div class="price">$<span data-price data-monthly="229" data-quarterly="195">229</span><span class="per" data-per>/month</span></div>
+        <p class="plan-desc">Two drips a month plus a booster — built for people training and travelling hard.</p>
+        <ul class="plan-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 2 signature IVs / month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 1 free vitamin booster / month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Priority same-day booking</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free mobile delivery</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 15% off all upgrades</li>
+        </ul>
+        <a class="btn btn-sage btn-block" href="#book">Choose Elevated</a>
+      </div>
+
+      <!-- Elite -->
+      <div class="plan reveal" data-d="3">
+        <span class="plan-name">Elite</span>
+        <h3>The Performance</h3>
+        <div class="price">$<span data-price data-monthly="399" data-quarterly="339">399</span><span class="per" data-per>/month</span></div>
+        <p class="plan-desc">Unlimited-style care for athletes and high performers who never want to dip.</p>
+        <ul class="plan-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 4 signature IVs / month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 1 NAD+ or premium drip / month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Unlimited boosters</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Dedicated clinician & concierge</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Bring-a-friend guest pass</li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="#book">Choose Elite</a>
+      </div>
+    </div>
+    <p class="text-center" style="margin-top:26px;font-size:.88rem;color:var(--taupe-d)">No contracts. Pause or cancel anytime. <a href="#memberships" style="text-decoration:underline">Compare all benefits →</a></p>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="section tight">
+  <div class="container">
+    <div class="stat-row">
+      <div class="stat reveal" data-d="1"><div class="num">4,000+</div><div class="lbl">Drips delivered</div></div>
+      <div class="stat reveal" data-d="2"><div class="num">45<span style="font-size:1.3rem"> min</span></div><div class="lbl">Average session</div></div>
+      <div class="stat reveal" data-d="3"><div class="num">4.9★</div><div class="lbl">Average rating</div></div>
+      <div class="stat reveal" data-d="3"><div class="num">7</div><div class="lbl">Days a week</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section bg-beige">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:46px">
+      <p class="eyebrow center">From the trenches</p>
+      <h2>Results they felt — same day.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="quote-card reveal" data-d="1">
+        <div class="stars">★★★★★</div>
+        <p>"I train twice a day and the Athletic drip is the reason my legs show up. The team comes to my gym before sessions."</p>
+        <div class="who"><span class="av">M</span><div><div class="nm">Marco D.</div><div class="loc">CrossFit athlete · Brickell</div></div></div>
+      </div>
+      <div class="quote-card reveal" data-d="2">
+        <div class="stars">★★★★★</div>
+        <p>"Booked Recovery the morning after a red-eye and felt human in an hour. The nurse was so calm and professional."</p>
+        <div class="who"><span class="av">S</span><div><div class="nm">Sofia R.</div><div class="loc">Member · Coral Gables</div></div></div>
+      </div>
+      <div class="quote-card reveal" data-d="3">
+        <div class="stars">★★★★★</div>
+        <p>"The membership pays for itself. Two drips a month, priority booking, and it actually keeps my energy steady."</p>
+        <div class="who"><span class="av">J</span><div><div class="nm">James K.</div><div class="loc">Elevated member · Miami Beach</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="container" style="max-width:820px">
+    <div class="section-head center reveal" style="margin-bottom:36px">
+      <p class="eyebrow center">Good to know</p>
+      <h2>Frequently asked</h2>
+    </div>
+    <div class="grid" style="gap:14px">
+      <details class="card reveal" data-d="1"><summary style="cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none">Is IV therapy safe?</summary><p style="margin:14px 0 0">Every treatment is administered by a licensed nurse or paramedic after a short health screening. We use single-use, sterile supplies and clinician-prepared formulas.</p></details>
+      <details class="card reveal" data-d="1"><summary style="cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none">How long does a session take?</summary><p style="margin:14px 0 0">Most drips run about 45 minutes from setup to finish. NAD+ infusions are administered slowly and take longer — we'll let you know when you book.</p></details>
+      <details class="card reveal" data-d="2"><summary style="cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none">Do you really come to me?</summary><p style="margin:14px 0 0">Yes. We bring everything to your home, office, hotel or gym across greater Miami, or you can visit our studio in Coconut Grove.</p></details>
+      <details class="card reveal" data-d="2"><summary style="cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none">Can I pause my membership?</summary><p style="margin:14px 0 0">Absolutely. There are no contracts — pause or cancel anytime from your account, and unused credits roll over for 60 days.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div style="max-width:34ch">
+        <p class="eyebrow" style="color:var(--sage)">Ready when you are</p>
+        <h2>Stop running on empty.</h2>
+        <p>Book a single session or join a membership in under two minutes.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sage" href="#book">Book Now</a>
+          <a class="btn btn-light" href="#memberships">See Memberships</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" id="services">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="#home">Home</a> · IV Menu</p>
+    <p class="eyebrow reveal">The IV Menu</p>
+    <h1 class="reveal">Six signature drips, one for every goal.</h1>
+    <p class="lede reveal" data-d="1">Every blend is single-dose, clinician-prepared, and administered after a quick health screen. Add a vitamin booster to any drip. Sessions run about 45 minutes.</p>
+    <div class="hero-actions reveal" data-d="1">
+      <a class="btn btn-primary" href="#book">Book a Drip</a>
+      <a class="btn btn-ghost" href="#memberships">Become a Member</a>
+    </div>
+  </div>
+</section>
+
+<!-- MENU GRID -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-3">
+      <a class="card iv-card reveal" data-d="1" href="#athletic-performance">
+        <div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="iv-price">$199</span></div>
+        <h3>Athletic Performance</h3>
+        <p class="iv-desc">Amino acids, magnesium and B-complex to prime muscles, sharpen focus and raise your ceiling.</p>
+        <div class="iv-tags"><span class="tag sage">Pre / post training</span><span class="tag">~45 min</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="card iv-card reveal" data-d="2" href="#recovery">
+        <div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></span><span class="iv-price">$189</span></div>
+        <h3>Recovery</h3>
+        <p class="iv-desc">Anti-nausea, electrolytes and glutathione to bounce back from travel, late nights or hard efforts.</p>
+        <div class="iv-tags"><span class="tag sage">Bounce back</span><span class="tag">~45 min</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="card iv-card reveal" data-d="3" href="#energy">
+        <div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span><span class="iv-price">$179</span></div>
+        <h3>Energy</h3>
+        <p class="iv-desc">A B12 + B-complex boost with amino blends to clear brain fog and power a demanding week.</p>
+        <div class="iv-tags"><span class="tag sage">Zero Excuses</span><span class="tag">~45 min</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="card iv-card reveal" data-d="1" href="#hydration-rescue">
+        <div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3s5.5 6.5 5.5 11a5.5 5.5 0 0 1-11 0C6.5 9.5 12 3 12 3z"/></svg></span><span class="iv-price">$149</span></div>
+        <h3>Hydration Rescue</h3>
+        <p class="iv-desc">A fast liter of balanced fluids and electrolytes to rehydrate after heat, sweat or a long flight.</p>
+        <div class="iv-tags"><span class="tag sage">Rapid rehydrate</span><span class="tag">~30 min</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="card iv-card reveal" data-d="2" href="#nad-plus">
+        <div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3c5 4 5 14 10 18M17 3C12 7 12 17 7 21M8 7h8M7.5 12h9M8 17h8"/></svg></span><span class="iv-price">$349</span></div>
+        <h3>NAD+ Renewal</h3>
+        <p class="iv-desc">Cellular-level repair to support clarity, longevity and metabolic recovery. The reset button.</p>
+        <div class="iv-tags"><span class="tag sage">Longevity</span><span class="tag">90+ min</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+      <a class="card iv-card reveal" data-d="3" href="#immunity">
+        <div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/></svg></span><span class="iv-price">$169</span></div>
+        <h3>Immunity</h3>
+        <p class="iv-desc">High-dose vitamin C, zinc and antioxidants to shore up defenses before travel or at the first sign of a bug.</p>
+        <div class="iv-tags"><span class="tag sage">Defense</span><span class="tag">~45 min</span></div>
+        <div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOSTERS -->
+<section class="section bg-beige">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:34px">
+      <p class="eyebrow">Add-on boosters</p>
+      <h2>Top off any drip.</h2>
+      <p class="lede">Push extra nutrients into any session. Members save on every add-on.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card reveal" data-d="1"><h4 style="font-family:var(--font-sans);font-weight:700">Glutathione</h4><p style="font-size:.9rem;margin:6px 0 0">Master antioxidant for detox & glow. <strong>+$35</strong></p></div>
+      <div class="card reveal" data-d="1"><h4 style="font-family:var(--font-sans);font-weight:700">Extra B12</h4><p style="font-size:.9rem;margin:6px 0 0">Energy & metabolism support. <strong>+$25</strong></p></div>
+      <div class="card reveal" data-d="2"><h4 style="font-family:var(--font-sans);font-weight:700">Vitamin C 5g</h4><p style="font-size:.9rem;margin:6px 0 0">Immune & collagen boost. <strong>+$30</strong></p></div>
+      <div class="card reveal" data-d="2"><h4 style="font-family:var(--font-sans);font-weight:700">Magnesium</h4><p style="font-size:.9rem;margin:6px 0 0">Muscle relaxation & sleep. <strong>+$25</strong></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div style="max-width:34ch">
+        <p class="eyebrow" style="color:var(--sage)">Not sure which one?</p>
+        <h2>We'll match you in minutes.</h2>
+        <p>Tell us your goal at booking and our clinicians will recommend the right drip.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sage" href="#book">Book a Drip</a>
+          <a class="btn btn-light" href="#memberships">See Memberships</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" id="athletic-performance">
+
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="#home">Home</a> · <a href="#services">IV Menu</a> · Athletic Performance</p>
+    <p class="eyebrow reveal">Performance</p>
+    <h1 class="reveal">Athletic Performance</h1>
+    <p class="lede reveal" data-d="1">Prime your body before the work — or rebuild it after.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:54px">
+  <div class="container">
+    <div class="detail-grid">
+      <!-- LEFT -->
+      <div class="reveal">
+        <p class="eyebrow">What it does</p>
+        <h2>Why people book Athletic Performance.</h2>
+        <p>Athletic Performance is our most-requested drip among competitors and weekend warriors alike. It floods muscles with amino acids, magnesium and a full B-complex so you can train harder, cramp less, and recover faster than effort alone allows.</p>
+        <p>Run it before a big session to top off your tank, or after to shorten the gap between hard days. Co-designed by our athlete-paramedic founder, it's tuned for people who actually push.</p>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">What's inside</h3>
+        <div class="card" style="padding:8px 26px;margin-top:14px">
+          <div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Amino Acid Blend</h4><p>Building blocks for muscle repair and lean-tissue recovery.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Magnesium</h4><p>Eases cramping and supports muscle relaxation and sleep.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>B-Complex</h4><p>Converts fuel to usable energy and fights training fatigue.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Vitamin B12</h4><p>Supports red-blood-cell function and oxygen delivery.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Electrolyte Fluids</h4><p>A full liter to replace what hard sweat takes out.</p></div></div>
+        </div>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">Best for</h3>
+        <div class="iv-tags" style="margin-top:14px"><span class="tag sage">Pre-event prep</span><span class="tag sage">Post-workout recovery</span><span class="tag sage">Endurance days</span><span class="tag sage">Competition week</span></div>
+
+        <div class="card bg-sage-soft" style="margin-top:30px;border:none">
+          <div class="feature">
+            <span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span>
+            <div><h4>What it feels like</h4><p>Most athletes feel looser and clearer within the hour, with noticeably easier legs the next day.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT (sticky booking card) -->
+      <aside>
+        <div class="detail-card reveal" data-d="1">
+          <span class="iv-icon" style="width:60px;height:60px;border-radius:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="width:30px;height:30px"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+          <h3 style="margin-top:16px;font-size:1.6rem">Athletic Performance</h3>
+          <div class="price-line" style="margin:6px 0 2px"><span class="big">$199</span><span style="color:var(--taupe-d)">/ session</span></div>
+          <p style="font-size:.9rem;color:var(--taupe-d);margin:0 0 18px">~45 min · single session</p>
+          <a class="btn btn-primary btn-block" href="#book">Book this drip</a>
+          <a class="btn btn-ghost btn-block" href="#memberships" style="margin-top:10px">Save with membership</a>
+          <div style="margin-top:22px;padding-top:20px;border-top:1px solid var(--line)">
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Duration</span><span>~45 min</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Volume</span><span>1,000 ml balanced fluids</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Administered by</span><span>Licensed clinician</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Where</span><span>Home, gym or studio</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section tight bg-beige">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:26px">
+      <p class="eyebrow">The payoff</p>
+      <h2>What you can expect.</h2>
+    </div>
+    <div class="pill-list reveal"><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Faster muscle recovery</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> More endurance in the tank</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Sharper focus under load</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Reduced cramping</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Deep rehydration</span></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:46px">
+      <p class="eyebrow center">Simple as it gets</p>
+      <h2>From booking to better in under an hour.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" data-d="1"><div class="n">1</div><h4>Book Athletic Performance</h4><p>Choose your time and place — home, gym, hotel or our studio.</p></div>
+      <div class="step reveal" data-d="2"><div class="n">2</div><h4>Quick screen</h4><p>Your clinician confirms it's a fit and preps your single-dose blend.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">3</div><h4>Relax</h4><p>Sit back for ~45 min while the drip does its work.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">4</div><h4>Elevate</h4><p>Most people feel the difference the very same day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="section bg-beige">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px" class="reveal">
+      <div class="section-head"><p class="eyebrow">Keep exploring</p><h2>You might also like</h2></div>
+      <a class="btn btn-ghost" href="#services">Full IV menu →</a>
+    </div>
+    <div class="grid grid-3"><a class="card iv-card reveal" href="#recovery"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></span><span class="iv-price">$189</span></div><h3>Recovery</h3><p class="iv-desc">Erase the late night, the red-eye, or the hard effort.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#energy"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span><span class="iv-price">$179</span></div><h3>Energy</h3><p class="iv-desc">Trade the 3pm crash for a clean, steady lift.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#hydration-rescue"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3s5.5 6.5 5.5 11a5.5 5.5 0 0 1-11 0C6.5 9.5 12 3 12 3z"/></svg></span><span class="iv-price">$149</span></div><h3>Hydration Rescue</h3><p class="iv-desc">A fast liter to bring you back to baseline.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div style="max-width:34ch">
+        <p class="eyebrow" style="color:var(--sage)">Feel it today</p>
+        <h2>Ready for your Athletic Performance drip?</h2>
+        <p>Book a single session or join a membership and save on every visit.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sage" href="#book">Book Now</a>
+          <a class="btn btn-light" href="#memberships">See Memberships</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" id="recovery">
+
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="#home">Home</a> · <a href="#services">IV Menu</a> · Recovery</p>
+    <p class="eyebrow reveal">Recovery & Reset</p>
+    <h1 class="reveal">Recovery</h1>
+    <p class="lede reveal" data-d="1">Erase the late night, the red-eye, or the hard effort.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:54px">
+  <div class="container">
+    <div class="detail-grid">
+      <!-- LEFT -->
+      <div class="reveal">
+        <p class="eyebrow">What it does</p>
+        <h2>Why people book Recovery.</h2>
+        <p>Recovery is the morning-after reset. It pairs anti-nausea and anti-inflammatory support with glutathione and a liter of electrolytes to settle your stomach, clear the fog, and bring you back to baseline fast.</p>
+        <p>Whether it's a celebration, a long flight, or a brutal training block, this drip helps your body do in 45 minutes what would otherwise take all day.</p>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">What's inside</h3>
+        <div class="card" style="padding:8px 26px;margin-top:14px">
+          <div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Anti-Nausea Support</h4><p>Calms an unsettled stomach so you can rehydrate comfortably.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Anti-Inflammatory</h4><p>Takes the edge off aches and a pounding head.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Glutathione</h4><p>Master antioxidant that supports the body's detox pathways.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>B-Complex & B12</h4><p>Rebuilds depleted energy stores.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Electrolyte Fluids</h4><p>Rapid rehydration to flush and reset.</p></div></div>
+        </div>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">Best for</h3>
+        <div class="iv-tags" style="margin-top:14px"><span class="tag sage">Morning after</span><span class="tag sage">Jet lag</span><span class="tag sage">Post-race soreness</span><span class="tag sage">Big day tomorrow</span></div>
+
+        <div class="card bg-sage-soft" style="margin-top:30px;border:none">
+          <div class="feature">
+            <span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span>
+            <div><h4>What it feels like</h4><p>Clients routinely walk in rough and leave feeling human again — usually before the bag is even empty.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT (sticky booking card) -->
+      <aside>
+        <div class="detail-card reveal" data-d="1">
+          <span class="iv-icon" style="width:60px;height:60px;border-radius:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="width:30px;height:30px"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></span>
+          <h3 style="margin-top:16px;font-size:1.6rem">Recovery</h3>
+          <div class="price-line" style="margin:6px 0 2px"><span class="big">$189</span><span style="color:var(--taupe-d)">/ session</span></div>
+          <p style="font-size:.9rem;color:var(--taupe-d);margin:0 0 18px">~45 min · single session</p>
+          <a class="btn btn-primary btn-block" href="#book">Book this drip</a>
+          <a class="btn btn-ghost btn-block" href="#memberships" style="margin-top:10px">Save with membership</a>
+          <div style="margin-top:22px;padding-top:20px;border-top:1px solid var(--line)">
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Duration</span><span>~45 min</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Volume</span><span>1,000 ml balanced fluids</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Administered by</span><span>Licensed clinician</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Where</span><span>Home, gym or studio</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section tight bg-beige">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:26px">
+      <p class="eyebrow">The payoff</p>
+      <h2>What you can expect.</h2>
+    </div>
+    <div class="pill-list reveal"><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Settles nausea</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Rehydrates fast</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Supports natural detox</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Eases headache</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Restores energy</span></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:46px">
+      <p class="eyebrow center">Simple as it gets</p>
+      <h2>From booking to better in under an hour.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" data-d="1"><div class="n">1</div><h4>Book Recovery</h4><p>Choose your time and place — home, gym, hotel or our studio.</p></div>
+      <div class="step reveal" data-d="2"><div class="n">2</div><h4>Quick screen</h4><p>Your clinician confirms it's a fit and preps your single-dose blend.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">3</div><h4>Relax</h4><p>Sit back for ~45 min while the drip does its work.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">4</div><h4>Elevate</h4><p>Most people feel the difference the very same day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="section bg-beige">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px" class="reveal">
+      <div class="section-head"><p class="eyebrow">Keep exploring</p><h2>You might also like</h2></div>
+      <a class="btn btn-ghost" href="#services">Full IV menu →</a>
+    </div>
+    <div class="grid grid-3"><a class="card iv-card reveal" href="#athletic-performance"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="iv-price">$199</span></div><h3>Athletic Performance</h3><p class="iv-desc">Prime your body before the work — or rebuild it after.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#energy"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span><span class="iv-price">$179</span></div><h3>Energy</h3><p class="iv-desc">Trade the 3pm crash for a clean, steady lift.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#hydration-rescue"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3s5.5 6.5 5.5 11a5.5 5.5 0 0 1-11 0C6.5 9.5 12 3 12 3z"/></svg></span><span class="iv-price">$149</span></div><h3>Hydration Rescue</h3><p class="iv-desc">A fast liter to bring you back to baseline.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div style="max-width:34ch">
+        <p class="eyebrow" style="color:var(--sage)">Feel it today</p>
+        <h2>Ready for your Recovery drip?</h2>
+        <p>Book a single session or join a membership and save on every visit.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sage" href="#book">Book Now</a>
+          <a class="btn btn-light" href="#memberships">See Memberships</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" id="energy">
+
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="#home">Home</a> · <a href="#services">IV Menu</a> · Energy</p>
+    <p class="eyebrow reveal">Energy & Focus</p>
+    <h1 class="reveal">Energy</h1>
+    <p class="lede reveal" data-d="1">Trade the 3pm crash for a clean, steady lift.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:54px">
+  <div class="container">
+    <div class="detail-grid">
+      <!-- LEFT -->
+      <div class="reveal">
+        <p class="eyebrow">What it does</p>
+        <h2>Why people book Energy.</h2>
+        <p>Energy is built for demanding weeks. A concentrated B12 and B-complex core, paired with an amino energy blend and magnesium, helps clear brain fog and deliver steady fuel without the jitters or crash of caffeine.</p>
+        <p>It's the drip our members reach for on Monday mornings, before back-to-back travel, or any week that's asking more than usual of them.</p>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">What's inside</h3>
+        <div class="card" style="padding:8px 26px;margin-top:14px">
+          <div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Vitamin B12</h4><p>Methylcobalamin for energy metabolism and focus.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Full B-Complex</h4><p>Supports the conversion of food into clean energy.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Amino Energy Blend</h4><p>Sustained mental and physical drive.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Magnesium</h4><p>Balances the lift and supports calm focus.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Electrolyte Fluids</h4><p>Hydration is the foundation of real energy.</p></div></div>
+        </div>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">Best for</h3>
+        <div class="iv-tags" style="margin-top:14px"><span class="tag sage">Busy work weeks</span><span class="tag sage">Brain fog</span><span class="tag sage">Afternoon slumps</span><span class="tag sage">Shift work</span></div>
+
+        <div class="card bg-sage-soft" style="margin-top:30px;border:none">
+          <div class="feature">
+            <span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span>
+            <div><h4>What it feels like</h4><p>A clean, level kind of energy — more 'fog lifted' than 'wired'.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT (sticky booking card) -->
+      <aside>
+        <div class="detail-card reveal" data-d="1">
+          <span class="iv-icon" style="width:60px;height:60px;border-radius:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="width:30px;height:30px"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span>
+          <h3 style="margin-top:16px;font-size:1.6rem">Energy</h3>
+          <div class="price-line" style="margin:6px 0 2px"><span class="big">$179</span><span style="color:var(--taupe-d)">/ session</span></div>
+          <p style="font-size:.9rem;color:var(--taupe-d);margin:0 0 18px">~45 min · single session</p>
+          <a class="btn btn-primary btn-block" href="#book">Book this drip</a>
+          <a class="btn btn-ghost btn-block" href="#memberships" style="margin-top:10px">Save with membership</a>
+          <div style="margin-top:22px;padding-top:20px;border-top:1px solid var(--line)">
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Duration</span><span>~45 min</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Volume</span><span>1,000 ml balanced fluids</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Administered by</span><span>Licensed clinician</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Where</span><span>Home, gym or studio</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section tight bg-beige">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:26px">
+      <p class="eyebrow">The payoff</p>
+      <h2>What you can expect.</h2>
+    </div>
+    <div class="pill-list reveal"><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Sustained energy</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Mental clarity</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Lifted mood</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Metabolism support</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> No caffeine crash</span></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:46px">
+      <p class="eyebrow center">Simple as it gets</p>
+      <h2>From booking to better in under an hour.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" data-d="1"><div class="n">1</div><h4>Book Energy</h4><p>Choose your time and place — home, gym, hotel or our studio.</p></div>
+      <div class="step reveal" data-d="2"><div class="n">2</div><h4>Quick screen</h4><p>Your clinician confirms it's a fit and preps your single-dose blend.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">3</div><h4>Relax</h4><p>Sit back for ~45 min while the drip does its work.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">4</div><h4>Elevate</h4><p>Most people feel the difference the very same day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="section bg-beige">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px" class="reveal">
+      <div class="section-head"><p class="eyebrow">Keep exploring</p><h2>You might also like</h2></div>
+      <a class="btn btn-ghost" href="#services">Full IV menu →</a>
+    </div>
+    <div class="grid grid-3"><a class="card iv-card reveal" href="#athletic-performance"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="iv-price">$199</span></div><h3>Athletic Performance</h3><p class="iv-desc">Prime your body before the work — or rebuild it after.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#recovery"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></span><span class="iv-price">$189</span></div><h3>Recovery</h3><p class="iv-desc">Erase the late night, the red-eye, or the hard effort.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#hydration-rescue"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3s5.5 6.5 5.5 11a5.5 5.5 0 0 1-11 0C6.5 9.5 12 3 12 3z"/></svg></span><span class="iv-price">$149</span></div><h3>Hydration Rescue</h3><p class="iv-desc">A fast liter to bring you back to baseline.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div style="max-width:34ch">
+        <p class="eyebrow" style="color:var(--sage)">Feel it today</p>
+        <h2>Ready for your Energy drip?</h2>
+        <p>Book a single session or join a membership and save on every visit.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sage" href="#book">Book Now</a>
+          <a class="btn btn-light" href="#memberships">See Memberships</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" id="hydration-rescue">
+
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="#home">Home</a> · <a href="#services">IV Menu</a> · Hydration Rescue</p>
+    <p class="eyebrow reveal">Everyday Hydration</p>
+    <h1 class="reveal">Hydration Rescue</h1>
+    <p class="lede reveal" data-d="1">A fast liter to bring you back to baseline.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:54px">
+  <div class="container">
+    <div class="detail-grid">
+      <!-- LEFT -->
+      <div class="reveal">
+        <p class="eyebrow">What it does</p>
+        <h2>Why people book Hydration Rescue.</h2>
+        <p>Hydration Rescue is the essential — a full liter of balanced fluids and electrolytes to quickly replace what heat, sweat, or a long flight pulls out of you. Simple, fast, and effective.</p>
+        <p>It's the perfect entry point if you're new to IV therapy, and the quickest session on the menu at around 30 minutes.</p>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">What's inside</h3>
+        <div class="card" style="padding:8px 26px;margin-top:14px">
+          <div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>1,000 ml Balanced Fluids</h4><p>A full liter of sterile, isotonic hydration.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Electrolyte Blend</h4><p>Sodium, potassium and chloride to restore balance.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Trace Minerals</h4><p>Supports normal nerve and muscle function.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Optional B12 Boost</h4><p>Add a clean energy lift if you need one.</p></div></div>
+        </div>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">Best for</h3>
+        <div class="iv-tags" style="margin-top:14px"><span class="tag sage">Heat & sweat</span><span class="tag sage">After flights</span><span class="tag sage">Mild dehydration</span><span class="tag sage">Before a big day</span></div>
+
+        <div class="card bg-sage-soft" style="margin-top:30px;border:none">
+          <div class="feature">
+            <span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span>
+            <div><h4>What it feels like</h4><p>The fastest 'back to normal' on the menu — ideal when you just need to reset.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT (sticky booking card) -->
+      <aside>
+        <div class="detail-card reveal" data-d="1">
+          <span class="iv-icon" style="width:60px;height:60px;border-radius:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="width:30px;height:30px"><path d="M12 3s5.5 6.5 5.5 11a5.5 5.5 0 0 1-11 0C6.5 9.5 12 3 12 3z"/></svg></span>
+          <h3 style="margin-top:16px;font-size:1.6rem">Hydration Rescue</h3>
+          <div class="price-line" style="margin:6px 0 2px"><span class="big">$149</span><span style="color:var(--taupe-d)">/ session</span></div>
+          <p style="font-size:.9rem;color:var(--taupe-d);margin:0 0 18px">~30 min · single session</p>
+          <a class="btn btn-primary btn-block" href="#book">Book this drip</a>
+          <a class="btn btn-ghost btn-block" href="#memberships" style="margin-top:10px">Save with membership</a>
+          <div style="margin-top:22px;padding-top:20px;border-top:1px solid var(--line)">
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Duration</span><span>~30 min</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Volume</span><span>1,000 ml balanced fluids</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Administered by</span><span>Licensed clinician</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Where</span><span>Home, gym or studio</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section tight bg-beige">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:26px">
+      <p class="eyebrow">The payoff</p>
+      <h2>What you can expect.</h2>
+    </div>
+    <div class="pill-list reveal"><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Rapid rehydration</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Replenished electrolytes</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Less fatigue</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Clearer head</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Quick 30-min session</span></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:46px">
+      <p class="eyebrow center">Simple as it gets</p>
+      <h2>From booking to better in under an hour.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" data-d="1"><div class="n">1</div><h4>Book Hydration Rescue</h4><p>Choose your time and place — home, gym, hotel or our studio.</p></div>
+      <div class="step reveal" data-d="2"><div class="n">2</div><h4>Quick screen</h4><p>Your clinician confirms it's a fit and preps your single-dose blend.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">3</div><h4>Relax</h4><p>Sit back for ~30 min while the drip does its work.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">4</div><h4>Elevate</h4><p>Most people feel the difference the very same day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="section bg-beige">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px" class="reveal">
+      <div class="section-head"><p class="eyebrow">Keep exploring</p><h2>You might also like</h2></div>
+      <a class="btn btn-ghost" href="#services">Full IV menu →</a>
+    </div>
+    <div class="grid grid-3"><a class="card iv-card reveal" href="#athletic-performance"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="iv-price">$199</span></div><h3>Athletic Performance</h3><p class="iv-desc">Prime your body before the work — or rebuild it after.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#recovery"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></span><span class="iv-price">$189</span></div><h3>Recovery</h3><p class="iv-desc">Erase the late night, the red-eye, or the hard effort.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#energy"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span><span class="iv-price">$179</span></div><h3>Energy</h3><p class="iv-desc">Trade the 3pm crash for a clean, steady lift.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div style="max-width:34ch">
+        <p class="eyebrow" style="color:var(--sage)">Feel it today</p>
+        <h2>Ready for your Hydration Rescue drip?</h2>
+        <p>Book a single session or join a membership and save on every visit.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sage" href="#book">Book Now</a>
+          <a class="btn btn-light" href="#memberships">See Memberships</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" id="nad-plus">
+
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="#home">Home</a> · <a href="#services">IV Menu</a> · NAD+ Renewal</p>
+    <p class="eyebrow reveal">Longevity & Cellular</p>
+    <h1 class="reveal">NAD+ Renewal</h1>
+    <p class="lede reveal" data-d="1">A cellular reset for clarity, energy, and longevity.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:54px">
+  <div class="container">
+    <div class="detail-grid">
+      <!-- LEFT -->
+      <div class="reveal">
+        <p class="eyebrow">What it does</p>
+        <h2>Why people book NAD+ Renewal.</h2>
+        <p>NAD+ Renewal works at the cellular level. NAD+ is a coenzyme central to how your cells produce energy and repair themselves, and levels naturally decline with age and stress. This infusion is our deepest reset — for clarity, sustained energy, and long-term resilience.</p>
+        <p>Because NAD+ is delivered slowly for comfort, plan for 90 minutes or more. It's a favorite for high performers recovering from burnout and anyone investing in longevity.</p>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">What's inside</h3>
+        <div class="card" style="padding:8px 26px;margin-top:14px">
+          <div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>NAD+ (250–500 mg)</h4><p>The coenzyme at the center of cellular energy and repair.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Glutathione</h4><p>Antioxidant support to complement the reset.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>B-Complex</h4><p>Cofactors that support NAD+ pathways.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Amino Support</h4><p>Aids cellular recovery and balance.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Electrolyte Fluids</h4><p>Comfortable, steady hydration throughout.</p></div></div>
+        </div>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">Best for</h3>
+        <div class="iv-tags" style="margin-top:14px"><span class="tag sage">Cognitive clarity</span><span class="tag sage">Longevity & anti-aging</span><span class="tag sage">Burnout recovery</span><span class="tag sage">Metabolic reset</span></div>
+
+        <div class="card bg-sage-soft" style="margin-top:30px;border:none">
+          <div class="feature">
+            <span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span>
+            <div><h4>What it feels like</h4><p>A slower, deeper infusion — many describe lasting clarity and steadier energy in the days after.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT (sticky booking card) -->
+      <aside>
+        <div class="detail-card reveal" data-d="1">
+          <span class="iv-icon" style="width:60px;height:60px;border-radius:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="width:30px;height:30px"><path d="M7 3c5 4 5 14 10 18M17 3C12 7 12 17 7 21M8 7h8M7.5 12h9M8 17h8"/></svg></span>
+          <h3 style="margin-top:16px;font-size:1.6rem">NAD+ Renewal</h3>
+          <div class="price-line" style="margin:6px 0 2px"><span class="big">$349</span><span style="color:var(--taupe-d)">/ session</span></div>
+          <p style="font-size:.9rem;color:var(--taupe-d);margin:0 0 18px">90+ min · single session</p>
+          <a class="btn btn-primary btn-block" href="#book">Book this drip</a>
+          <a class="btn btn-ghost btn-block" href="#memberships" style="margin-top:10px">Save with membership</a>
+          <div style="margin-top:22px;padding-top:20px;border-top:1px solid var(--line)">
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Duration</span><span>90+ min</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Volume</span><span>NAD+ in balanced fluids</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Administered by</span><span>Licensed clinician</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Where</span><span>Home, gym or studio</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section tight bg-beige">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:26px">
+      <p class="eyebrow">The payoff</p>
+      <h2>What you can expect.</h2>
+    </div>
+    <div class="pill-list reveal"><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Supports cellular repair</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Mental sharpness</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Sustained energy</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Longevity focus</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Recovery from burnout</span></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:46px">
+      <p class="eyebrow center">Simple as it gets</p>
+      <h2>From booking to better in under an hour.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" data-d="1"><div class="n">1</div><h4>Book NAD+ Renewal</h4><p>Choose your time and place — home, gym, hotel or our studio.</p></div>
+      <div class="step reveal" data-d="2"><div class="n">2</div><h4>Quick screen</h4><p>Your clinician confirms it's a fit and preps your single-dose blend.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">3</div><h4>Relax</h4><p>Sit back for 90+ min while the drip does its work.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">4</div><h4>Elevate</h4><p>Most people feel the difference the very same day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="section bg-beige">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px" class="reveal">
+      <div class="section-head"><p class="eyebrow">Keep exploring</p><h2>You might also like</h2></div>
+      <a class="btn btn-ghost" href="#services">Full IV menu →</a>
+    </div>
+    <div class="grid grid-3"><a class="card iv-card reveal" href="#athletic-performance"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="iv-price">$199</span></div><h3>Athletic Performance</h3><p class="iv-desc">Prime your body before the work — or rebuild it after.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#recovery"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></span><span class="iv-price">$189</span></div><h3>Recovery</h3><p class="iv-desc">Erase the late night, the red-eye, or the hard effort.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#energy"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span><span class="iv-price">$179</span></div><h3>Energy</h3><p class="iv-desc">Trade the 3pm crash for a clean, steady lift.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div style="max-width:34ch">
+        <p class="eyebrow" style="color:var(--sage)">Feel it today</p>
+        <h2>Ready for your NAD+ Renewal drip?</h2>
+        <p>Book a single session or join a membership and save on every visit.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sage" href="#book">Book Now</a>
+          <a class="btn btn-light" href="#memberships">See Memberships</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" id="immunity">
+
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="#home">Home</a> · <a href="#services">IV Menu</a> · Immunity</p>
+    <p class="eyebrow reveal">Immune Defense</p>
+    <h1 class="reveal">Immunity</h1>
+    <p class="lede reveal" data-d="1">Build your defenses before — or at the first sign of — a bug.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:54px">
+  <div class="container">
+    <div class="detail-grid">
+      <!-- LEFT -->
+      <div class="reveal">
+        <p class="eyebrow">What it does</p>
+        <h2>Why people book Immunity.</h2>
+        <p>Immunity loads your system with high-dose vitamin C, zinc and antioxidants to support a strong immune response. Use it proactively before travel and through cold-and-flu season, or at the very first scratchy-throat warning.</p>
+        <p>It pairs a meaningful nutrient punch with a full liter of hydration — because staying ahead of illness beats chasing it.</p>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">What's inside</h3>
+        <div class="card" style="padding:8px 26px;margin-top:14px">
+          <div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>High-Dose Vitamin C</h4><p>Antioxidant support for a healthy immune response.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Zinc</h4><p>A key mineral for immune cell function.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Glutathione</h4><p>Master antioxidant for defense and recovery.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>B-Complex</h4><p>Supports energy while your body works.</p></div></div><div class="ingredient"><span class="i-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg></span><div><h4>Electrolyte Fluids</h4><p>Hydration to keep defenses sharp.</p></div></div>
+        </div>
+
+        <h3 style="margin-top:38px;font-size:1.5rem">Best for</h3>
+        <div class="iv-tags" style="margin-top:14px"><span class="tag sage">Before travel</span><span class="tag sage">Cold & flu season</span><span class="tag sage">Run-down weeks</span><span class="tag sage">Around big events</span></div>
+
+        <div class="card bg-sage-soft" style="margin-top:30px;border:none">
+          <div class="feature">
+            <span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span>
+            <div><h4>What it feels like</h4><p>Best used early — clients who run it at the first sign of a bug tend to fare noticeably better.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT (sticky booking card) -->
+      <aside>
+        <div class="detail-card reveal" data-d="1">
+          <span class="iv-icon" style="width:60px;height:60px;border-radius:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" style="width:30px;height:30px"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/></svg></span>
+          <h3 style="margin-top:16px;font-size:1.6rem">Immunity</h3>
+          <div class="price-line" style="margin:6px 0 2px"><span class="big">$169</span><span style="color:var(--taupe-d)">/ session</span></div>
+          <p style="font-size:.9rem;color:var(--taupe-d);margin:0 0 18px">~45 min · single session</p>
+          <a class="btn btn-primary btn-block" href="#book">Book this drip</a>
+          <a class="btn btn-ghost btn-block" href="#memberships" style="margin-top:10px">Save with membership</a>
+          <div style="margin-top:22px;padding-top:20px;border-top:1px solid var(--line)">
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Duration</span><span>~45 min</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Volume</span><span>1,000 ml balanced fluids</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Administered by</span><span>Licensed clinician</span></div>
+            <div class="summary-line" style="border:none;padding:7px 0"><span style="color:var(--taupe-d)">Where</span><span>Home, gym or studio</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section tight bg-beige">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:26px">
+      <p class="eyebrow">The payoff</p>
+      <h2>What you can expect.</h2>
+    </div>
+    <div class="pill-list reveal"><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Stronger immune response</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Antioxidant support</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Faster bounce-back</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Better hydration</span><span class="benefit-chip" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Travel-ready</span></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:46px">
+      <p class="eyebrow center">Simple as it gets</p>
+      <h2>From booking to better in under an hour.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" data-d="1"><div class="n">1</div><h4>Book Immunity</h4><p>Choose your time and place — home, gym, hotel or our studio.</p></div>
+      <div class="step reveal" data-d="2"><div class="n">2</div><h4>Quick screen</h4><p>Your clinician confirms it's a fit and preps your single-dose blend.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">3</div><h4>Relax</h4><p>Sit back for ~45 min while the drip does its work.</p></div>
+      <div class="step reveal" data-d="3"><div class="n">4</div><h4>Elevate</h4><p>Most people feel the difference the very same day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="section bg-beige">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px" class="reveal">
+      <div class="section-head"><p class="eyebrow">Keep exploring</p><h2>You might also like</h2></div>
+      <a class="btn btn-ghost" href="#services">Full IV menu →</a>
+    </div>
+    <div class="grid grid-3"><a class="card iv-card reveal" href="#athletic-performance"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="iv-price">$199</span></div><h3>Athletic Performance</h3><p class="iv-desc">Prime your body before the work — or rebuild it after.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#recovery"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></span><span class="iv-price">$189</span></div><h3>Recovery</h3><p class="iv-desc">Erase the late night, the red-eye, or the hard effort.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="card iv-card reveal" href="#energy"><div class="iv-top"><span class="iv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span><span class="iv-price">$179</span></div><h3>Energy</h3><p class="iv-desc">Trade the 3pm crash for a clean, steady lift.</p><div class="iv-foot"><span class="link-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div style="max-width:34ch">
+        <p class="eyebrow" style="color:var(--sage)">Feel it today</p>
+        <h2>Ready for your Immunity drip?</h2>
+        <p>Book a single session or join a membership and save on every visit.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sage" href="#book">Book Now</a>
+          <a class="btn btn-light" href="#memberships">See Memberships</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" id="memberships">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="#home">Home</a> · Membership</p>
+    <p class="eyebrow reveal">Monthly Membership</p>
+    <h1 class="reveal">Hydration on a schedule, at a member's rate.</h1>
+    <p class="lede reveal" data-d="1">Pick a tier, get a monthly drip at a locked-in price, skip the line, and let unused credits roll over. No contracts — pause or cancel anytime.</p>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="section" style="padding-top:56px">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:40px">
+      <div class="billing-toggle" data-billing>
+        <button class="active" data-mode="monthly">Monthly</button>
+        <button data-mode="quarterly">Quarterly <span class="save">save 15%</span></button>
+      </div>
+    </div>
+
+    <div class="plans">
+      <!-- Essential -->
+      <div class="plan reveal" data-d="1">
+        <span class="plan-name">Essential</span>
+        <h3>The Baseline</h3>
+        <div class="price">$<span data-price data-monthly="129" data-quarterly="110">129</span><span class="per" data-per>/month</span></div>
+        <p class="plan-desc">One signature drip every month to stay ahead of fatigue and dehydration.</p>
+        <ul class="plan-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 1 signature IV / month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 10% off add-on boosters</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Member-only pricing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Credits roll over 60 days</li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="#book">Choose Essential</a>
+      </div>
+
+      <!-- Elevated -->
+      <div class="plan featured reveal" data-d="2">
+        <span class="plan-badge">Most popular</span>
+        <span class="plan-name">Elevated</span>
+        <h3>The Standard</h3>
+        <div class="price">$<span data-price data-monthly="229" data-quarterly="195">229</span><span class="per" data-per>/month</span></div>
+        <p class="plan-desc">Two drips a month plus a booster — built for people training and travelling hard.</p>
+        <ul class="plan-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 2 signature IVs / month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 1 free vitamin booster / month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Priority same-day booking</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free mobile delivery</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 15% off all upgrades</li>
+        </ul>
+        <a class="btn btn-sage btn-block" href="#book">Choose Elevated</a>
+      </div>
+
+      <!-- Elite -->
+      <div class="plan reveal" data-d="3">
+        <span class="plan-name">Elite</span>
+        <h3>The Performance</h3>
+        <div class="price">$<span data-price data-monthly="399" data-quarterly="339">399</span><span class="per" data-per>/month</span></div>
+        <p class="plan-desc">Unlimited-style care for athletes and high performers who never want to dip.</p>
+        <ul class="plan-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 4 signature IVs / month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 1 NAD+ or premium drip / month</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Unlimited boosters</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Dedicated clinician & concierge</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Bring-a-friend guest pass</li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="#book">Choose Elite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section bg-beige">
+  <div class="container" style="max-width:920px">
+    <div class="section-head center reveal" style="margin-bottom:34px">
+      <p class="eyebrow center">Compare</p>
+      <h2>Every benefit, side by side.</h2>
+    </div>
+    <div class="reveal" style="overflow-x:auto">
+      <table class="compare">
+        <thead>
+          <tr><th>Benefit</th><th>Essential</th><th>Elevated</th><th>Elite</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Signature IVs / month</td><td>1</td><td>2</td><td>4</td></tr>
+          <tr><td>Premium / NAD+ drip</td><td class="no">—</td><td class="no">—</td><td class="yes">1 / mo</td></tr>
+          <tr><td>Vitamin boosters</td><td>10% off</td><td>1 free</td><td class="yes">Unlimited</td></tr>
+          <tr><td>Priority same-day booking</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Free mobile delivery</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Upgrade discount</td><td>—</td><td>15%</td><td class="yes">20%</td></tr>
+          <tr><td>Dedicated clinician & concierge</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><td>Guest pass</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ / mo</td></tr>
+          <tr><td>Credits roll over</td><td>60 days</td><td>60 days</td><td>90 days</td></tr>
+          <tr><td>Contract</td><td>None</td><td>None</td><td>None</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- PERKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:46px">
+      <p class="eyebrow center">Why members stay</p>
+      <h2>More than a discount.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal" data-d="1"><div class="feature"><span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></span><div><h4>Skip the line</h4><p>Priority booking means a same-day slot when you need it most — even on weekends.</p></div></div></div>
+      <div class="card reveal" data-d="2"><div class="feature"><span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12l4 4 14-14"/><path d="M3 19h18"/></svg></span><div><h4>Locked-in pricing</h4><p>Your rate never changes while you're a member, even if menu prices rise.</p></div></div></div>
+      <div class="card reveal" data-d="3"><div class="feature"><span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></span><div><h4>Credits roll over</h4><p>Busy month? Unused drips carry forward so nothing goes to waste.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section bg-sage-soft">
+  <div class="container" style="max-width:820px">
+    <div class="section-head center reveal" style="margin-bottom:32px">
+      <p class="eyebrow center">Membership FAQ</p>
+      <h2>The fine print, made simple.</h2>
+    </div>
+    <div class="grid" style="gap:14px">
+      <details class="card reveal"><summary style="cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none">Can I switch tiers?</summary><p style="margin:14px 0 0">Yes — upgrade or downgrade anytime from your account. Changes take effect on your next billing date.</p></details>
+      <details class="card reveal"><summary style="cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none">What if I don't use my drips?</summary><p style="margin:14px 0 0">Unused signature drips roll over for 60 days (90 days on Elite), so a busy month never means lost value.</p></details>
+      <details class="card reveal"><summary style="cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none">Can I share my membership?</summary><p style="margin:14px 0 0">Memberships are individual, but Elite includes a monthly guest pass and all members get friends-and-family referral perks.</p></details>
+      <details class="card reveal"><summary style="cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none">How do I cancel?</summary><p style="margin:14px 0 0">Two taps in your account. No fees, no contracts. You keep access through the end of your billing cycle.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div style="max-width:34ch">
+        <p class="eyebrow" style="color:var(--sage)">Join today</p>
+        <h2>Become a member in two minutes.</h2>
+        <p>Lock in your rate and book your first drip today.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sage" href="#book">Start Membership</a>
+          <a class="btn btn-light" href="#services">See the IV Menu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" id="about">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="#home">Home</a> · About</p>
+    <p class="eyebrow reveal">Our Story</p>
+    <h1 class="reveal">Built by the people who carry the bags and start the lines.</h1>
+    <p class="lede reveal" data-d="1">Elev8 was born from the field and the bedside — where two clinicians saw, every day, how much faster people feel better with the right fluids and nutrients. So they brought that care out of the clinic and to your door.</p>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow">The mission</p>
+        <h2>Hospital-grade. Gym-floor ready.</h2>
+        <p>We believe recovery shouldn't require a waiting room. Whether you're an athlete chasing a PR, a parent running on four hours of sleep, or a traveler stepping off a red-eye, your body responds to the same thing: smart hydration, delivered well.</p>
+        <p>Elev8 pairs hospital-grade standards with concierge convenience. Every formula is single-dose and clinician-prepared, every visit starts with a health screen, and every drip is administered by a licensed professional. The result is care you can actually feel — usually the same day.</p>
+        <div class="pill-list" style="margin-top:24px">
+          <span class="benefit-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Licensed clinicians only</span>
+          <span class="benefit-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Single-use sterile supplies</span>
+          <span class="benefit-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Screen before every visit</span>
+        </div>
+      </div>
+      <div class="reveal" data-d="1">
+        <div class="media-frame">
+          <div class="swatch-art" style="background:
+            radial-gradient(420px 300px at 30% 20%, rgba(198,255,0,.55), transparent 60%),
+            radial-gradient(360px 360px at 80% 80%, rgba(120,120,120,.9), transparent 60%),
+            linear-gradient(150deg, #161616, #0e0e0e)"></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:flex-end;padding:30px">
+            <div style="background:rgba(12,12,12,.82);backdrop-filter:blur(6px);border-radius:20px;padding:20px 22px;box-shadow:var(--shadow-md)">
+              <div style="font-family:var(--font-display);font-size:1.6rem">Field-tested. Clinic-grade.</div>
+              <div style="font-size:.9rem;color:var(--taupe-d);margin-top:4px">Care that travels with you.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section bg-beige">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:46px">
+      <p class="eyebrow center">What we stand for</p>
+      <h2>Three principles behind every drip.</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal" data-d="1"><div class="feature"><span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/></svg></span><div><h4>Safety first, always</h4><p>Clinical protocols, screenings, and sterile technique are non-negotiable — the same standards we hold in the field.</p></div></div></div>
+      <div class="card reveal" data-d="2"><div class="feature"><span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span><div><h4>People over transactions</h4><p>We get to know your goals and your body. You're a name and a story, never a number on a schedule.</p></div></div></div>
+      <div class="card reveal" data-d="3"><div class="feature"><span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><div><h4>Performance you can feel</h4><p>Formulas grounded in physiology — designed to help you recover faster and show up stronger, not just feel pampered.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-bottom:46px">
+      <p class="eyebrow center">Meet the founders</p>
+      <h2>The clinicians behind Elev8.</h2>
+      <p class="lede mx-auto">An athlete-paramedic and a veteran nurse who decided Miami deserved better hydration care.</p>
+    </div>
+
+    <div class="grid grid-2" style="gap:30px;max-width:920px;margin:0 auto">
+      <!-- Andres -->
+      <div class="team-card reveal" data-d="1">
+        <div class="team-photo">
+          <div style="position:absolute;inset:0;background:
+            radial-gradient(300px 240px at 30% 25%, rgba(198,255,0,.6), transparent 60%),
+            linear-gradient(155deg, #1d1d1d, #0b0b0b)"></div>
+          <div class="initials">AH</div>
+        </div>
+        <div class="team-body">
+          <div class="role">Co-Founder · Athlete & Paramedic</div>
+          <h3>Andres Herrera</h3>
+          <p>Andres is a competitive athlete and licensed paramedic who has spent years on the front line of emergency care — and just as many pushing his own body in training and competition. That dual lens shapes everything at Elev8: he knows firsthand how the right fluids and nutrients change how you recover, perform, and bounce back.</p>
+          <p>He leads our performance formulas and field operations, making sure every mobile visit runs with the precision and calm of a seasoned first responder.</p>
+          <div class="cred-pills">
+            <span class="tag sage">Licensed Paramedic</span>
+            <span class="tag sage">Competitive Athlete</span>
+            <span class="tag">Performance & Recovery Lead</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Steph -->
+      <div class="team-card reveal" data-d="2">
+        <div class="team-photo">
+          <div style="position:absolute;inset:0;background:
+            radial-gradient(300px 240px at 70% 25%, rgba(120,120,120,.9), transparent 60%),
+            linear-gradient(155deg, #0e0e0e, #161616)"></div>
+          <div class="initials">SB</div>
+        </div>
+        <div class="team-body">
+          <div class="role">Co-Founder · Registered Nurse</div>
+          <h3>Steph Bezanilla</h3>
+          <p>Steph is a registered nurse with more than seven years of clinical experience, from fast-paced bedside care to wellness and IV therapy. Patients trust her instantly — she's the kind of clinician who makes a needle feel like nothing and a hard day feel lighter.</p>
+          <p>She owns clinical standards at Elev8: screening protocols, formula safety, and training every clinician on the team. If it touches a patient, it meets Steph's bar first.</p>
+          <div class="cred-pills">
+            <span class="tag sage">Registered Nurse</span>
+            <span class="tag sage">7+ Years Experience</span>
+            <span class="tag">Clinical Director</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<section class="section tight bg-sage-soft">
+  <div class="container">
+    <div class="stat-row">
+      <div class="stat reveal" data-d="1"><div class="num">4,000+</div><div class="lbl">Drips delivered</div></div>
+      <div class="stat reveal" data-d="2"><div class="num">7+</div><div class="lbl">Yrs nursing experience</div></div>
+      <div class="stat reveal" data-d="3"><div class="num">100%</div><div class="lbl">Licensed clinicians</div></div>
+      <div class="stat reveal" data-d="3"><div class="num">4.9★</div><div class="lbl">Client rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div style="max-width:36ch">
+        <p class="eyebrow" style="color:var(--sage)">Come feel the difference</p>
+        <h2>Care that comes to you.</h2>
+        <p>Book a drip or talk to our team about the right formula for your goals.</p>
+        <div class="hero-actions">
+          <a class="btn btn-sage" href="#book">Book a Drip</a>
+          <a class="btn btn-light" href="#services">Explore the Menu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="page" id="book">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero" style="padding-bottom:46px">
+  <div class="container">
+    <p class="breadcrumb reveal"><a href="#home">Home</a> · Book</p>
+    <p class="eyebrow reveal">Book in minutes</p>
+    <h1 class="reveal">Let's get you elevated.</h1>
+    <p class="lede reveal" data-d="1">Pick your drip, choose a time and place, and a licensed clinician comes to you. Same-day slots across Miami.</p>
+  </div>
+</section>
+
+<!-- BOOKING APP -->
+<section class="section" style="padding-top:30px">
+  <div class="container">
+    <div class="booking-shell reveal">
+      <!-- Progress -->
+      <div class="booking-progress">
+        <div class="bp active" data-step="1"><span class="bp-n">1</span>Drip</div>
+        <div class="bp" data-step="2"><span class="bp-n">2</span>Where & When</div>
+        <div class="bp" data-step="3"><span class="bp-n">3</span>Your details</div>
+        <div class="bp" data-step="4"><span class="bp-n">4</span>Confirm</div>
+      </div>
+
+      <div class="booking-body">
+        <!-- STEP 1 -->
+        <div class="book-step active" data-step="1">
+          <h2 style="font-size:1.6rem">Choose your drip</h2>
+          <p style="color:var(--taupe-d);margin-bottom:22px">Not sure? Pick the closest goal — your clinician can fine-tune on arrival.</p>
+          <div class="option-grid" id="dripOptions">
+            <div class="option" data-name="Athletic Performance" data-price="199"><div><div class="o-name">Athletic Performance</div><div class="o-meta">Train harder, recover faster</div></div><span class="o-price">$199</span></div>
+            <div class="option" data-name="Recovery" data-price="189"><div><div class="o-name">Recovery</div><div class="o-meta">Bounce back fast</div></div><span class="o-price">$189</span></div>
+            <div class="option" data-name="Energy" data-price="179"><div><div class="o-name">Energy</div><div class="o-meta">Beat the crash</div></div><span class="o-price">$179</span></div>
+            <div class="option" data-name="Hydration Rescue" data-price="149"><div><div class="o-name">Hydration Rescue</div><div class="o-meta">Back to baseline</div></div><span class="o-price">$149</span></div>
+            <div class="option" data-name="NAD+ Renewal" data-price="349"><div><div class="o-name">NAD+ Renewal</div><div class="o-meta">Cellular reset</div></div><span class="o-price">$349</span></div>
+            <div class="option" data-name="Immunity" data-price="169"><div><div class="o-name">Immunity</div><div class="o-meta">Defense & travel</div></div><span class="o-price">$169</span></div>
+          </div>
+
+          <h3 style="font-size:1.15rem;margin:28px 0 12px">Or join as a member &amp; save</h3>
+          <div class="option-grid" id="planOptions">
+            <div class="option" data-name="Essential Membership" data-price="129"><div><div class="o-name">Essential</div><div class="o-meta">1 drip / month</div></div><span class="o-price">$129<small style="color:var(--taupe-d)">/mo</small></span></div>
+            <div class="option" data-name="Elevated Membership" data-price="229"><div><div class="o-name">Elevated · Popular</div><div class="o-meta">2 drips + booster / month</div></div><span class="o-price">$229<small style="color:var(--taupe-d)">/mo</small></span></div>
+            <div class="option" data-name="Elite Membership" data-price="399"><div><div class="o-name">Elite</div><div class="o-meta">4 drips + premium / month</div></div><span class="o-price">$399<small style="color:var(--taupe-d)">/mo</small></span></div>
+          </div>
+
+          <div class="book-actions">
+            <span></span>
+            <button class="btn btn-primary" data-next disabled id="next1">Continue</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="book-step" data-step="2">
+          <h2 style="font-size:1.6rem">Where &amp; when</h2>
+          <p style="color:var(--taupe-d);margin-bottom:22px">We'll bring everything to you, or visit us in Coconut Grove.</p>
+
+          <div class="field">
+            <label>Location</label>
+            <div class="chip-row" id="locOptions">
+              <div class="chip-select" data-val="At home">At home</div>
+              <div class="chip-select" data-val="At the gym">At the gym</div>
+              <div class="chip-select" data-val="Office / hotel">Office / hotel</div>
+              <div class="chip-select" data-val="Elev8 Studio">Elev8 Studio</div>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="addr">Street address <span style="color:var(--taupe-d);font-weight:400">(skip if studio)</span></label>
+              <input id="addr" type="text" placeholder="1820 Wellness Blvd, Miami">
+            </div>
+            <div class="field">
+              <label for="date">Preferred date</label>
+              <input id="date" type="date">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Preferred time</label>
+            <div class="chip-row" id="timeOptions">
+              <div class="chip-select" data-val="Morning (8–11am)">Morning · 8–11am</div>
+              <div class="chip-select" data-val="Midday (11am–2pm)">Midday · 11am–2pm</div>
+              <div class="chip-select" data-val="Afternoon (2–5pm)">Afternoon · 2–5pm</div>
+              <div class="chip-select" data-val="Evening (5–8pm)">Evening · 5–8pm</div>
+            </div>
+          </div>
+
+          <div class="book-actions">
+            <button class="btn btn-ghost" data-back>Back</button>
+            <button class="btn btn-primary" data-next id="next2">Continue</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="book-step" data-step="3">
+          <h2 style="font-size:1.6rem">Your details</h2>
+          <p style="color:var(--taupe-d);margin-bottom:22px">So your clinician can confirm and complete a quick health screen.</p>
+          <div class="field-row">
+            <div class="field"><label for="fname">First name</label><input id="fname" type="text" placeholder="Andres"></div>
+            <div class="field"><label for="lname">Last name</label><input id="lname" type="text" placeholder="Herrera"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@email.com"></div>
+            <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="(305) 555-0123"></div>
+          </div>
+          <div class="field">
+            <label for="notes">Anything we should know? <span style="color:var(--taupe-d);font-weight:400">(optional)</span></label>
+            <textarea id="notes" rows="3" placeholder="Goals, allergies, parking, gate code…"></textarea>
+          </div>
+          <div class="book-actions">
+            <button class="btn btn-ghost" data-back>Back</button>
+            <button class="btn btn-primary" data-next id="next3">Review booking</button>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="book-step" data-step="4">
+          <h2 style="font-size:1.6rem">Review &amp; confirm</h2>
+          <p style="color:var(--taupe-d);margin-bottom:22px">Almost there. Here's your booking.</p>
+          <div class="card" style="box-shadow:none">
+            <div class="summary-line"><span style="color:var(--taupe-d)">Drip / Plan</span><span id="sumDrip">—</span></div>
+            <div class="summary-line"><span style="color:var(--taupe-d)">Location</span><span id="sumLoc">—</span></div>
+            <div class="summary-line"><span style="color:var(--taupe-d)">Date</span><span id="sumDate">—</span></div>
+            <div class="summary-line"><span style="color:var(--taupe-d)">Time</span><span id="sumTime">—</span></div>
+            <div class="summary-line"><span style="color:var(--taupe-d)">Name</span><span id="sumName">—</span></div>
+            <div class="summary-line total"><span>Estimated total</span><span id="sumTotal">—</span></div>
+          </div>
+          <p style="font-size:.82rem;color:var(--taupe-d);margin-top:14px">Demo booking — no payment is taken. A team member would normally confirm your slot by text within minutes.</p>
+          <div class="book-actions">
+            <button class="btn btn-ghost" data-back>Back</button>
+            <button class="btn btn-sage" id="confirmBtn">Confirm booking</button>
+          </div>
+        </div>
+
+        <!-- CONFIRMED -->
+        <div class="book-step" data-step="5">
+          <div style="text-align:center;padding:20px 0 6px">
+            <div class="confirm-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h2 style="font-size:1.9rem">You're booked!</h2>
+            <p style="max-width:42ch;margin:0 auto 8px">Thanks, <span id="doneName">friend</span>. We've reserved your <span id="doneDrip">drip</span>. Watch for a confirmation text shortly.</p>
+            <div class="hero-actions" style="justify-content:center;margin-top:24px">
+              <a class="btn btn-primary" href="#home">Back to home</a>
+              <a class="btn btn-ghost" href="#services">Explore the menu</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- reassurance -->
+    <div class="grid grid-3" style="margin-top:40px">
+      <div class="card reveal" data-d="1"><div class="feature"><span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/></svg></span><div><h4>Licensed clinicians</h4><p>Every visit is run by a registered nurse or paramedic.</p></div></div></div>
+      <div class="card reveal" data-d="2"><div class="feature"><span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></span><div><h4>Same-day slots</h4><p>Book now and we'll often reach you within hours.</p></div></div></div>
+      <div class="card reveal" data-d="3"><div class="feature"><span class="f-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16M12 4v16" /></svg></span><div><h4>No commitment</h4><p>Single sessions or flexible memberships — your call.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#home"><span class="logo-mark">E8</span> Elev<span class="num">8</span></a>
+        <p style="max-width:34ch;margin-top:6px;">Clinician-built IV therapy for athletes and people who train like one. Delivered to your gym, home, or our studio.</p>
+        <div class="social-row">
+          <a href="#home" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#home" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.8 4 4 4.2v3c-1.5 0-2.9-.5-4-1.3V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.1a3 3 0 1 0 2 2.8V3h3z"/></svg></a>
+          <a href="#home" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.7-1.7C19.3 5.2 12 5.2 12 5.2s-7.3 0-8.9.4A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.7 1.7c1.6.4 8.9.4 8.9.4s7.3 0 8.9-.4a2.5 2.5 0 0 0 1.7-1.7C23 15.2 23 12 23 12zM9.8 15.3V8.7l6 3.3-6 3.3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>IV Menu</h5>
+        <ul>
+          <li><a href="#athletic-performance">Athletic Performance</a></li>
+          <li><a href="#recovery">Recovery</a></li>
+          <li><a href="#energy">Energy</a></li>
+          <li><a href="#hydration-rescue">Hydration Rescue</a></li>
+          <li><a href="#nad-plus">NAD+ Renewal</a></li>
+          <li><a href="#immunity">Immunity</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#memberships">Membership</a></li>
+          <li><a href="#book">Book Now</a></li>
+          <li><a href="#home">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <ul>
+          <li>1820 Wellness Blvd, Suite 8<br>Miami, FL 33133</li>
+          <li><a href="tel:+13055551888">(305) 555-1888</a></li>
+          <li><a href="mailto:hello@elev8hydration.com">hello@elev8hydration.com</a></li>
+          <li>Mon&ndash;Sun &middot; 8am&ndash;8pm</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-disclaimer">These statements have not been evaluated by the Food and Drug Administration. IV therapy is not intended to diagnose, treat, cure, or prevent any disease. All treatments are administered by licensed clinicians after a health screening. Consult your physician before beginning any new wellness program.</p>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Elev8 Hydration Therapy. All rights reserved.</span>
+      <span>Privacy &middot; Terms &middot; Demo site</span>
+    </div>
+  </div>
+</footer>
+<nav class="tabbar">
+  <a href="#home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Home</a>
+  <a href="#services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3s5 6.4 5 10a5 5 0 0 1-10 0c0-3.6 5-10 5-10z"/></svg>IV Menu</a>
+  <a href="#memberships"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>Member</a>
+  <a href="#about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5h.01"/></svg>About</a>
+  <a href="#book" class="tab-book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="16" rx="3"/><path d="M3.5 9h17M8 3v4M16 3v4"/></svg>Book</a>
+</nav>
+
+<script>
+
+(function(){
+  var header=document.querySelector('.site-header');
+  function onScroll(){if(!header)return;if(window.scrollY>24)header.classList.add('scrolled');else header.classList.remove('scrolled');}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  var toggle=document.querySelector('.menu-toggle'),drawer=document.querySelector('.mobile-nav'),closeBtn=document.querySelector('.m-close');
+  function openMenu(){if(drawer){drawer.classList.add('open');document.body.style.overflow='hidden';}}
+  function closeMenu(){if(drawer){drawer.classList.remove('open');document.body.style.overflow='';}}
+  if(toggle)toggle.addEventListener('click',openMenu);
+  if(closeBtn)closeBtn.addEventListener('click',closeMenu);
+  if(drawer)drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+  var io=null;
+  function runReveal(page){
+    if(!page)return; if(io)io.disconnect();
+    var els=page.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){io.observe(e);});
+  }
+  document.querySelectorAll('[data-billing]').forEach(function(group){
+    var btns=group.querySelectorAll('button');
+    btns.forEach(function(btn){btn.addEventListener('click',function(){
+      btns.forEach(function(b){b.classList.remove('active');});btn.classList.add('active');
+      var mode=btn.getAttribute('data-mode');
+      document.querySelectorAll('[data-price]').forEach(function(p){var v=p.getAttribute('data-'+mode);if(v)p.firstChild.nodeValue=v;});
+      document.querySelectorAll('[data-per]').forEach(function(p){p.textContent=mode==='quarterly'?'/mo · billed quarterly':'/month';});
+    });});
+  });
+  function curId(){var h=(location.hash||'').replace('#','');return h||'home';}
+  function route(){
+    var id=curId(),page=document.getElementById(id)||document.getElementById('home');
+    document.querySelectorAll('.nav-links a, .tabbar a').forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id);});
+    if(header)header.classList.toggle('on-dark',id==='home');
+    closeMenu();window.scrollTo(0,0);runReveal(page);onScroll();
+  }
+  window.addEventListener('hashchange',route);route();
+  // force hero video autoplay (some browsers ignore the attribute alone)
+  var hv=document.querySelector('.hero-media video');
+  if(hv){ hv.muted=true; hv.setAttribute('muted',''); var pr=hv.play(); if(pr&&pr.catch){pr.catch(function(){});}
+    document.addEventListener('touchstart',function once(){ hv.play().catch(function(){}); document.removeEventListener('touchstart',once); },{passive:true,once:true}); }
+})();
+
+</script>
+<script>
+
+(function () {
+  var state = { drip: null, price: 0, isPlan: false, loc: null, time: null };
+
+  // single-select within a group of .option
+  function bindOptions(containerId, others) {
+    var c = document.getElementById(containerId);
+    if (!c) return;
+    c.querySelectorAll('.option').forEach(function (op) {
+      op.addEventListener('click', function () {
+        document.querySelectorAll('#dripOptions .option, #planOptions .option').forEach(function (o) { o.classList.remove('selected'); });
+        op.classList.add('selected');
+        state.drip = op.getAttribute('data-name');
+        state.price = parseInt(op.getAttribute('data-price'), 10);
+        state.isPlan = containerId === 'planOptions';
+        var n1 = document.getElementById('next1');
+        if (n1) n1.disabled = false;
+      });
+    });
+  }
+  bindOptions('dripOptions');
+  bindOptions('planOptions');
+
+  // chip single-select
+  function bindChips(containerId, key) {
+    var c = document.getElementById(containerId);
+    if (!c) return;
+    c.querySelectorAll('.chip-select').forEach(function (ch) {
+      ch.addEventListener('click', function () {
+        c.querySelectorAll('.chip-select').forEach(function (x) { x.classList.remove('selected'); });
+        ch.classList.add('selected');
+        state[key] = ch.getAttribute('data-val');
+      });
+    });
+  }
+  bindChips('locOptions', 'loc');
+  bindChips('timeOptions', 'time');
+
+  var current = 1;
+  function show(step) {
+    current = step;
+    document.querySelectorAll('.book-step').forEach(function (s) {
+      s.classList.toggle('active', parseInt(s.getAttribute('data-step'), 10) === step);
+    });
+    document.querySelectorAll('.booking-progress .bp').forEach(function (bp) {
+      var n = parseInt(bp.getAttribute('data-step'), 10);
+      bp.classList.toggle('active', n === step);
+      bp.classList.toggle('done', n < step);
+    });
+    document.querySelector('.booking-shell').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.querySelectorAll('[data-next]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (current === 1 && !state.drip) return;
+      if (current === 3) buildSummary();
+      show(Math.min(current + 1, 4));
+    });
+  });
+  document.querySelectorAll('[data-back]').forEach(function (btn) {
+    btn.addEventListener('click', function () { show(Math.max(current - 1, 1)); });
+  });
+
+  function buildSummary() {
+    var fname = (document.getElementById('fname').value || '').trim();
+    var lname = (document.getElementById('lname').value || '').trim();
+    var dateV = document.getElementById('date').value;
+    document.getElementById('sumDrip').textContent = state.drip || '—';
+    document.getElementById('sumLoc').textContent = state.loc || 'To confirm';
+    document.getElementById('sumDate').textContent = dateV ? new Date(dateV + 'T00:00').toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }) : 'To confirm';
+    document.getElementById('sumTime').textContent = state.time || 'To confirm';
+    document.getElementById('sumName').textContent = (fname + ' ' + lname).trim() || '—';
+    document.getElementById('sumTotal').textContent = '$' + (state.price || 0) + (state.isPlan ? ' / month' : '');
+  }
+
+  document.getElementById('confirmBtn').addEventListener('click', function () {
+    var fname = (document.getElementById('fname').value || '').trim();
+    document.getElementById('doneName').textContent = fname || 'friend';
+    document.getElementById('doneDrip').textContent = state.drip || 'drip';
+    document.querySelectorAll('.book-step').forEach(function (s) { s.classList.remove('active'); });
+    document.querySelector('.book-step[data-step="5"]').classList.add('active');
+    document.querySelectorAll('.booking-progress .bp').forEach(function (bp) { bp.classList.add('done'); bp.classList.remove('active'); });
+    document.querySelector('.booking-shell').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+
+</script>
+</body>
+</html>
